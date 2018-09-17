@@ -1,0 +1,39 @@
+﻿<Window x:Class="Marathon.WinLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Marathon"
+        mc:Ignorable="d"
+      Title="" Height="300" Width="500" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="277*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnSelRunner" Click="BtnSelRunner_Click" Content="Бегун" Grid.Row="3" Grid.Column="2" Background="#FF241D70" Foreground="#FFFDC100" FontFamily="Arial" FontSize="16"/>
+        <Button x:Name="BtnSelCoordinator" Click="BtnSelCoordinator_Click" Content="Координатор" Grid.Row="5" Grid.Column="2" Background="#FF241D70" Foreground="#FFFDC100" FontFamily="Arial" FontSize="16"/>
+        <Button x:Name="BtnSelAdmin" Click="BtnSelAdmin_Click" Content="Администратор" Grid.Row="7" Grid.Column="2" Background="#FF241D70" Foreground="#FFFDC100" FontFamily="Arial" FontSize="16"/>
+
+        <Label Content="Под каким пользователем вы хотите&#xD;&#xA;               войти в систему&#xD;&#xA;     (Только для тестирования!!)" FontSize="18.667" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="6" FontFamily="Arial" FontWeight="Bold" Grid.Row="1"/>
+        <Label Content="ТОЛЬКО ДЛЯ ТЕСТИРОВАНИЯ!" Grid.ColumnSpan="6" FontFamily="Arial" FontSize="22" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FFB4832A" />
+
+
+    </Grid>
+</Window>
