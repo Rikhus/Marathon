@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Marathon
 {
@@ -24,6 +26,7 @@ namespace Marathon
         {
             InitializeComponent();
             loadTime();
+            GetData();
         }
 
         public void loadTime()
@@ -54,10 +57,28 @@ namespace Marathon
             new MainWindow().Show();
             Close();
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        public void GetData()
         {
-
+            string temp = "";
+            using (SqlConnection connection = new SqlConnection("Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
+            {
+                connection.Open();
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = string.Format("SELECT FirstName FROM 'User'");
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            temp += (string)reader[1];
+                        }
+                    }
+                }
+                LblTest.Content = temp;
+                connection.Close();
+                
+            }
         }
+
     }
 }
