@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace Marathon
 {
     /// <summary>
@@ -59,21 +60,22 @@ namespace Marathon
         }
         public void GetData()
         {
-            string temp = "";
-            using (SqlConnection connection = new SqlConnection("Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
+            
+                
+            using (SqlConnection connection = new SqlConnection(@"Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
             {
+                
+                string temp = String.Format(@"SELECT * FROM [User]");
+                string results = "";
+                SqlCommand command = new SqlCommand(temp,connection);
                 connection.Open();
-                using (SqlCommand command = connection.CreateCommand())
+                SqlDataReader reader = command.ExecuteReader();
+                while(reader.Read())
                 {
-                    command.CommandText = string.Format("SELECT FirstName FROM 'User'");
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            temp += (string)reader[1];
-                        }
-                    }
+                    results += reader[1];
                 }
+                
+                
                 LblTest.Content = temp;
                 connection.Close();
                 
