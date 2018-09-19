@@ -32,7 +32,7 @@
             <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
         <Label Content="  Marathon Skills 2016" FontFamily="Arial" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#00903e" Grid.ColumnSpan="6" Foreground="#fdc13c"/>
-        <Label Content="Меню администратора" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Background="{x:Null}" Grid.ColumnSpan="6"  FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <Label Name="LblPeopleInf" Content="Меню администратора" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Background="{x:Null}" Grid.ColumnSpan="6"  FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="14,6,10,6"/>
 
         <Button  Content="Пользователи" Grid.Column="1" Grid.Row="3" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
