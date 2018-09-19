@@ -27,7 +27,7 @@ namespace Marathon
         {
             InitializeComponent();
             loadTime();
-            //LblTest.Content = GetData(@"SELECT [Password] FROM [User] WHERE Firstname='AHMAD'");
+            //LblTest.Content = GetData(@"SELECT [Password] FROM [User] WHERE Firstname='AHMAD', LastName='ADKIN'");
         }
 
         public void loadTime()
@@ -48,9 +48,22 @@ namespace Marathon
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             // new WinLogin().Show();
-            var window = new WinLogin();
-            window.Owner = this;
-            window.Show();
+            string results = GetData(@"SELECT [FirstName] FROM [User] WHERE ([Email]='"+ TxtBoxEmail.Text+"') AND ([Password]='"+TxtBoxPassword.Text+"')");
+            if (results == "Неверный логин или пароль")
+            {
+                LblInf.Content = results;
+            }
+            else if (results == "")
+            {
+                LblInf.Content = "Неверный логин или пароль";
+            }
+            else
+            {
+                LblInf.Content = results;
+                var window = new WinLogin();
+                window.Owner = this;
+                window.Show();
+            }
         }
         //кнопка возврата на главный экран
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
@@ -58,6 +71,7 @@ namespace Marathon
             new MainWindow().Show();
             Close();
         }
+        //функция для получения данных из БД MSSQL
         public string GetData(string Query)
         {
             
@@ -69,13 +83,17 @@ namespace Marathon
                 string results = "";
                 SqlCommand command = new SqlCommand(temp,connection);
                 connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+               // try
+               // {
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
                     {
                         results += reader[0];
                     }
-                connection.Close();
-                return results;
+                    connection.Close();
+                    return results;
+              //  }
+               // catch{ results = "Неверный логин или пароль"; return results; }
                 
             }
         }
