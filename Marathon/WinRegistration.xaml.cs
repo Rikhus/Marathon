@@ -50,7 +50,7 @@ namespace Marathon
             {
                 if(GetData(@"SELECT * FROM [User] WHERE [Email]='"+TxtEmail.Text+"' OR [Password]='" + TxtPassword + "'") == "")
                 {
-                    DataBase(@"INSERT INTO [User] (Email,Password,FirstName,LastName,Gender) VALUES ('"+TxtEmail.Text+"','"+TxtPassword+"','"+TxtFirstName.Text+"','"+TxtLastName+"','"+TxtGender+"')");
+                    DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[Gender]) VALUES ('"+TxtEmail.Text+"','"+TxtPassword+"','"+TxtFirstName.Text+"','"+TxtLastName+"','"+TxtGender+"')");
                 }
                 else
                 {
