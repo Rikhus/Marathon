@@ -92,7 +92,6 @@ C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinCoordinatorAcc.g.cs
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinFullLogin.g.cs
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinLogin.g.cs
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinMoreInf.g.cs
-C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRinnerMenu.g.cs
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRunnerAcc.g.cs
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\App.g.cs
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\Marathon_MarkupCompile.cache
@@ -104,7 +103,6 @@ C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinCoordinatorAcc.baml
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinFullLogin.baml
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinLogin.baml
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinMoreInf.baml
-C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRinnerMenu.baml
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRunnerAcc.baml
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\Marathon.g.resources
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\Marathon.Properties.Resources.resources
@@ -151,3 +149,7 @@ C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRegistration.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRegistration.baml
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerMenu.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerMenu.baml
+C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRegistration.g.cs
+C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRunnerMenu.g.cs
+C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRegistration.baml
+C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRunnerMenu.baml

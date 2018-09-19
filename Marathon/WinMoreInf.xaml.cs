@@ -37,6 +37,7 @@ namespace Marathon
             TimeSpan have = start.Subtract(now);
             if (have.Minutes < 0) { LblTime.Content = "   Марафон закончился"; return; }
             LblTime.Content = have.Days + " дней " + have.Hours + " часов и " + have.Minutes + " минут до начала гонки";
+            
         }
     }
 }

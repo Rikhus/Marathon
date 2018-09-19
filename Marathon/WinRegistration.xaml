@@ -52,20 +52,21 @@
         <Label Content="Имя:" Grid.Row="7" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label Content="Фамилия:" Grid.Row="8" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.RowSpan="2"/>
         <Label Content="Пол:" Grid.Row="10" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.RowSpan="2"/>
-        <TextBox Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" Text="" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBox Name="TxtEmail" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
+        <TextBox Name="TxtPassword" Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
+        <TextBox Name="TxtPasswordRepeat" Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
+        <TextBox Name="TxtFirstName" Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
+        <TextBox Name="TxtLastName" Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBox Name="TxtGender" Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" Text="" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <Label Content="Фото файл:" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="5" Grid.Row="6" FontFamily="Arial" FontWeight="Bold" Grid.ColumnSpan="3"/>
         <TextBox Grid.Column="5" Grid.Row="7" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
         <Button Content="Просмотр..." Grid.Column="8" Grid.Row="7" FontFamily="Arial" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <Image Grid.Column="8"  Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
         <Label Content="Дата рождения:" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="5" Grid.Row="9" FontFamily="Arial" FontWeight="Bold" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <DatePicker Grid.Column="7" Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
-        <Button Content="Регистрация" Grid.Column="2" Grid.Row="13" Background="#FF241D70" Foreground="#FFFDC13C"/>
+        <Button Name="BtnRegistration" Click="BtnRegistration_Click" Content="Регистрация" Grid.Column="2" Grid.Row="13" Background="#FF241D70" Foreground="#FFFDC13C"/>
         <Button Name="BtnClose" Click="BtnClose_Click" Content="Отменить" Grid.Column="5" Grid.Row="13"  Background="#FF241D70" Foreground="#FFFDC13C"/>
+        <Label Name="LblInf" Content="" Grid.Column="7" Grid.Row="13" Grid.ColumnSpan="3"/>
 
     </Grid>
 </Window>

@@ -24,6 +24,7 @@ namespace Marathon
         {
             InitializeComponent(); loadTime();
         }
+        
         //кнопка для регистрации в системе
         private void BtnMoreInf_Click(object sender, RoutedEventArgs e)
         { new WinMoreInf().Show(); Close(); }

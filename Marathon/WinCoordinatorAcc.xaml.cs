@@ -21,7 +21,7 @@ namespace Marathon
     {
         public WinCoordinatorAcc()
         {
-            InitializeComponent(); loadTime();
+            InitializeComponent(); loadTime();LblPeopleInf.Content +=" "+UserClass.FirstName;
         }
         //метод отсчета и вывода оставшегося до окончания марафона времени
         public void loadTime()
@@ -42,5 +42,6 @@ namespace Marathon
         {
             new MainWindow().Show(); Close();
         }
+        
     }
 }
