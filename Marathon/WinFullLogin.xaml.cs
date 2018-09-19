@@ -83,8 +83,8 @@ namespace Marathon
                 string results = "";
                 SqlCommand command = new SqlCommand(temp,connection);
                 connection.Open();
-               // try
-               // {
+                try
+                {
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
@@ -92,8 +92,8 @@ namespace Marathon
                     }
                     connection.Close();
                     return results;
-              //  }
-               // catch{ results = "Неверный логин или пароль"; return results; }
+                }
+               catch{ results = "Неверный логин или пароль"; return results; }
                 
             }
         }
