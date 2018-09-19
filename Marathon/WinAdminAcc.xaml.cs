@@ -23,7 +23,7 @@ namespace Marathon
       
         public WinAdminAcc()
         {
-            InitializeComponent();loadTime(); LblPeopleInf.Content += " " + UserClass.FirstName;
+            InitializeComponent();loadTime(); 
         }
         //метод отсчета и вывода оставшегося до окончания марафона времени
         public void loadTime()

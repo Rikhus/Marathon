@@ -21,7 +21,7 @@ namespace Marathon
     {
         public WinRunnerAcc()
         {
-            InitializeComponent();loadTime(); LblPeopleInf.Content += " " + UserClass.FirstName;
+            InitializeComponent();loadTime();
         }
         public void loadTime()
         {
