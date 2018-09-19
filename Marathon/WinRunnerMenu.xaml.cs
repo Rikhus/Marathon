@@ -50,5 +50,10 @@ namespace Marathon
             new WinFullLogin().Show();
             Close();
         }
+
+        private void BtnNewRunner_Click(object sender, RoutedEventArgs e)
+        {
+            new WinRegistration().Show(); Close();
+        }
     }
 }

@@ -29,7 +29,7 @@
         <Label Content=" Marathon Skills 2016" FontFamily="Arial" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#00903e" Grid.ColumnSpan="6" Foreground="#fdc13c"/>
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="12,6"/>
         <Button Name="BtnParticEarlier" Click="BtnParticEarlier_Click" Content="Я участвовал ранее" Grid.Column="2" Grid.Row="2" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="12,6"/>
-        <Button Content="Я новый участник" Grid.Column="2" Grid.Row="4" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="12,6"/>
+        <Button Name="BtnNewRunner" Click="BtnNewRunner_Click" Content="Я новый участник" Grid.Column="2" Grid.Row="4" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="12,6"/>
         <Label x:Name="LblTime" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="7" Grid.ColumnSpan="6" Foreground="#FFFDC100" Background="#FF00903E" FontFamily="Arial" FontSize="18.667" FontWeight="Bold"/>
         <Button Name="BtnLogin" Click="BtnLogin_Click" Content="Login" Grid.Column="4" Grid.Row="5" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
     </Grid>

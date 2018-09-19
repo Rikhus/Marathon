@@ -88,8 +88,8 @@
     <Compile Include="WinRegistration.xaml.cs">
       <DependentUpon>WinRegistration.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WinRinnerMenu.xaml.cs">
-      <DependentUpon>WinRinnerMenu.xaml</DependentUpon>
+    <Compile Include="WinRunnerMenu.xaml.cs">
+      <DependentUpon>WinRunnerMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinRunnerAcc.xaml.cs">
       <DependentUpon>WinRunnerAcc.xaml</DependentUpon>
@@ -134,7 +134,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WinRinnerMenu.xaml">
+    <Page Include="WinRunnerMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

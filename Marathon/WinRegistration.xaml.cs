@@ -21,12 +21,26 @@ namespace Marathon
     {
         public WinRegistration()
         {
-            InitializeComponent();
+            InitializeComponent();loadTime();
         }
-
+        //кнопка назад
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();Close();
+        }
+        //кнопка отмены
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            new WinRinnerMenu().Show(); Close();
+        }
+        //метод отсчета времени
+        public void loadTime()
+        {
+            DateTime now = DateTime.Now;
+            DateTime start = new DateTime(2018, 11, 24, 6, 00, 00);
+            TimeSpan have = start.Subtract(now);
+            if (have.Minutes < 0) { LblTime.Content = "   Марафон закончился"; return; }
+            LblTime.Content = have.Days + " дней " + have.Hours + " часов и " + have.Minutes + " минут до начала гонки";
         }
     }
 }

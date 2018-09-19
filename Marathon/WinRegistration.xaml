@@ -5,29 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Marathon"
         mc:Ignorable="d"
-        Title="Marathon Skills 2016 - Register as Runner" Height="450" Width="800">
+        Title="Marathon Skills 2016 - Register as Runner" Height="450" Width="700" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="136*"/>
-            <ColumnDefinition Width="220*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="125*"/>
             <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="220*"/>
-            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="114*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="11*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="61*"/>
-            <RowDefinition Height="46*"/>
-            <RowDefinition Height="32*"/>
-            <RowDefinition Height="237*"/>
+            <RowDefinition Height="58*"/>
             <RowDefinition Height="43*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="41*"/>
 
         </Grid.RowDefinitions>
-        <Label Content="Marathon Skills 2016" FontFamily="Arial" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00903e" Grid.ColumnSpan="6" Foreground="#fdc13c"/>
-        <Label Content="Регистрация бегуна" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Background="{x:Null}" Grid.ColumnSpan="6"  FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Marathon Skills 2016" FontFamily="Arial" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00903e" Grid.ColumnSpan="11" Foreground="#fdc13c"/>
+        <Label Content="Регистрация бегуна" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Background="{x:Null}" Grid.ColumnSpan="11"  FontFamily="Arial" FontSize="18" FontWeight="Bold"/>
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="12,6"/>
-        <Label x:Name="LblTime" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Grid.ColumnSpan="6" Foreground="#FFFDC100" Background="#FF00903E" FontFamily="Arial" FontSize="18.667" FontWeight="Bold"/>
+        <Label x:Name="LblTime" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="15" Grid.ColumnSpan="11" Foreground="#FFFDC100" Background="#FF00903E" FontFamily="Arial" FontSize="18.667" FontWeight="Bold"/>
+        <Label Content="Пожалуйста, заполните всю информацию, чтобы зарегистрироваться в качестве" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="2" Grid.ColumnSpan="11" FontFamily="Arial" FontWeight="Bold"/>
+        <Label Content="бегуна" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="11" FontFamily="Arial" FontWeight="Bold"/>
+        <Label Content="Email:" Grid.Row="4" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Пароль:" Grid.Row="5" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Повторите пароль:" Grid.Row="6" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Имя:" Grid.Row="7" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Фамилия:" Grid.Row="8" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.RowSpan="2"/>
+        <Label Content="Пол:" Grid.Row="10" FontFamily="Arial" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.RowSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" Text="" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label Content="Фото файл:" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="5" Grid.Row="6" FontFamily="Arial" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <TextBox Grid.Column="5" Grid.Row="7" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
+        <Button Content="Просмотр..." Grid.Column="8" Grid.Row="7" FontFamily="Arial" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Image Grid.Column="8"  Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+        <Label Content="Дата рождения:" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="5" Grid.Row="9" FontFamily="Arial" FontWeight="Bold" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <DatePicker Grid.Column="7" Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <Button Content="Регистрация" Grid.Column="2" Grid.Row="13" Background="#FF241D70" Foreground="#FFFDC13C"/>
+        <Button Name="BtnClose" Click="BtnClose_Click" Content="Отменить" Grid.Column="5" Grid.Row="13"  Background="#FF241D70" Foreground="#FFFDC13C"/>
 
     </Grid>
 </Window>
