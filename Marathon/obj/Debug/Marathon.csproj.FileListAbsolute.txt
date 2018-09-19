@@ -149,3 +149,5 @@ C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\Marathon.csproj.CoreCompileInp
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\Marathon.csproj.CopyComplete
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\Marathon.exe
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\Marathon.pdb
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRegistration.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRegistration.baml

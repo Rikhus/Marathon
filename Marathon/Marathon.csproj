@@ -85,6 +85,9 @@
     <Compile Include="WinMoreInf.xaml.cs">
       <DependentUpon>WinMoreInf.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinRegistration.xaml.cs">
+      <DependentUpon>WinRegistration.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinRinnerMenu.xaml.cs">
       <DependentUpon>WinRinnerMenu.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinMoreInf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinRegistration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
