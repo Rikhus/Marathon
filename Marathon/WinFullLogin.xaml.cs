@@ -27,7 +27,7 @@ namespace Marathon
         {
             InitializeComponent();
             loadTime();
-            GetData();
+            //LblTest.Content = GetData(@"SELECT [Password] FROM [User] WHERE Firstname='AHMAD'");
         }
 
         public void loadTime()
@@ -58,26 +58,24 @@ namespace Marathon
             new MainWindow().Show();
             Close();
         }
-        public void GetData()
+        public string GetData(string Query)
         {
             
                 
             using (SqlConnection connection = new SqlConnection(@"Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
             {
                 
-                string temp = String.Format(@"SELECT * FROM [User]");
+                string temp = String.Format(Query);
                 string results = "";
                 SqlCommand command = new SqlCommand(temp,connection);
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                while(reader.Read())
-                {
-                    results += reader[1];
-                }
-                
-                
-                LblTest.Content = temp;
+                while (reader.Read())
+                    {
+                        results += reader[0];
+                    }
                 connection.Close();
+                return results;
                 
             }
         }
