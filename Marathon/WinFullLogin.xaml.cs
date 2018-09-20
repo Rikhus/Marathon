@@ -52,18 +52,36 @@ namespace Marathon
             if (results == "Неверный логин или пароль")
             {
                 MessageBox.Show("Неверный логин или пароль");
+                var window = new WinLogin();
+                window.Owner = this;
+                window.Show();
             }
             else if (results == "")
             {
                 MessageBox.Show("Неверный логин или пароль");
+                var window = new WinLogin();
+                window.Owner = this;
+                window.Show();
             }
             else
             {
                
-                
-                var window = new WinLogin();
-                window.Owner = this;
-                window.Show();
+                string Role= GetData(@"SELECT [Roleid] FROM [User] WHERE ([Email]='" + TxtBoxEmail.Text + "') AND ([Password]='" + TxtBoxPassword.Text + "')");
+                if (Role == "A")
+                {
+                    new WinAdminAcc().Show();
+                    Close();
+                }
+                if (Role == "C")
+                {
+                    new WinCoordinatorAcc().Show();
+                    Close();
+                }
+                if (Role == "R")
+                {
+                    new WinRunnerAcc().Show();
+                    Close();
+                }
             }
         }
         //кнопка возврата на главный экран
