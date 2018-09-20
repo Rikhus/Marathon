@@ -67,6 +67,7 @@ namespace Marathon
                 User.LastName = TxtFirstName.Text;
                 User.Email = TxtEmail.Text;
                 User.DateOfBirth = DateOfBirth.Text;
+                User.DateOfBirth.Replace('.', '-');
                 User.CountryName = CountryList.SelectedItem.ToString();
                 User.CountryCode=GetData(@"SELECT [CountryCode] FROM [Country] WHERE [CountryName] = '"+User.CountryName+"'");
 
@@ -79,9 +80,9 @@ namespace Marathon
                 if (GetData(@"SELECT * FROM [User] WHERE [Email]='" + User.Email + "' AND [Password]='" + User.Password + "'") == "")
                 {
                     if ((!DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[RoleId])
-                    VALUES ('" + User.Email + "','" + User.Password + "','" + User.FirstName + "','" + User.LastName + "','R')"))
-                    && !(DataBase(@"INSERT INTO [Runner] ([Email],[Gender],[DateOfBirth],[CountryCode]) VALUES
-                    ('" + User.Email + "','" + User.Gender + "','" + User.DateOfBirth + "','" + User.CountryCode + "')")))
+                    VALUES ('" + User.Email + "','" + User.Password + "','" + User.FirstName + "','" + User.LastName + "','R')")))
+                   // && !(DataBase(@"INSERT INTO [Runner] ([Email],[Gender],[DateOfBirth],[CountryCode]) VALUES
+                   // ('" + User.Email + "','" + User.Gender + "','" + User.DateOfBirth + "','" + User.CountryCode + "')")))
                     {
                         new WinRunnerAcc().Show(); Close();
                     }
