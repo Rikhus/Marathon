@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\
 Marathon
 none
 false
 DEBUG;TRACE
-C:\Users\Rishat\Desktop\Marathon\Marathon\App.xaml
+C:\Users\User\Desktop\Marathon\Marathon\App.xaml
 10595479732
 
-20-1104840814
-16-2052577489
+19-1982644379
+16-1966922768
 MainWindow.xaml;WinAdminAcc.xaml;WinContacts.xaml;WinCoordinatorAcc.xaml;WinFullLogin.xaml;WinLogin.xaml;WinMoreInf.xaml;WinRegistration.xaml;WinRunnerMenu.xaml;WinRunnerAcc.xaml;
 
-False
+True
 

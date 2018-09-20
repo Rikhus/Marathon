@@ -12,9 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
-
+using System.Data;
 namespace Marathon
 {
+    public class User
+    {
+        public static string FirstName;
+        public static string LastName;
+        public static string Password;
+        public static string Email;
+        public static string DateOfBirth;
+        public static string Gender;
+        public static string CountryName;
+        public static string CountryCode;
+    }
     /// <summary>
     /// Логика взаимодействия для WinRegistration.xaml
     /// </summary>
@@ -22,12 +33,12 @@ namespace Marathon
     {
         public WinRegistration()
         {
-            InitializeComponent();loadTime();
+            InitializeComponent(); loadTime(); loadCountryData();
         }
         //кнопка назад
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();Close();
+            new MainWindow().Show(); Close();
         }
         //кнопка отмены
         private void BtnClose_Click(object sender, RoutedEventArgs e)
@@ -46,23 +57,43 @@ namespace Marathon
 
         private void BtnRegistration_Click(object sender, RoutedEventArgs e)
         {
-            if ((TxtPassword.Text == TxtPasswordRepeat.Text) && (TxtPassword.Text!=""))
+            string selectedGender = Gender.SelectedItem.ToString();
+            if (selectedGender != "") User.Gender = selectedGender;
+            if ((PswdBox.Password == PswdRepeatBox.Password) && (User.Gender != "") && (DateOfBirth.Text != "")&&(CountryList.SelectedItem.ToString()!=""))
             {
-                if(GetData(@"SELECT * FROM [User] WHERE [Email]='"+TxtEmail.Text+"' AND [Password]='" + TxtPassword + "'") == "")
+                
+                User.Password = PswdBox.Password;
+                User.FirstName = TxtFirstName.Text;
+                User.LastName = TxtFirstName.Text;
+                User.Email = TxtEmail.Text;
+                User.DateOfBirth = DateOfBirth.Text;
+                User.CountryName = CountryList.SelectedItem.ToString();
+                User.CountryCode=GetData(@"SELECT [CountryCode] FROM [Country] WHERE [CountryName] = '"+User.CountryName+"'");
+
+
+
+            }
+
+            if ((PswdBox.Password == PswdRepeatBox.Password) && (PswdBox.Password != ""))
+            {
+                if (GetData(@"SELECT * FROM [User] WHERE [Email]='" + User.Email + "' AND [Password]='" + User.Password + "'") == "")
                 {
-                    if (!DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[RoleId]) VALUES ('" + TxtEmail.Text + "','" + TxtPassword.Text + "','" + TxtFirstName.Text + "','" + TxtLastName.Text + "','R')"))
+                    if ((!DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[RoleId])
+                    VALUES ('" + User.Email + "','" + User.Password + "','" + User.FirstName + "','" + User.LastName + "','R')"))
+                    && !(DataBase(@"INSERT INTO [Runner] ([Email],[Gender],[DateOfBirth],[CountryCode]) VALUES
+                    ('" + User.Email + "','" + User.Gender + "','" + User.DateOfBirth + "','" + User.CountryCode + "')")))
                     {
                         new WinRunnerAcc().Show(); Close();
                     }
                 }
                 else
                 {
-                    LblInf.Content = "Email и/или пароль заняты";
+                    MessageBox.Show("Email и/или пароль заняты");
                 }
             }
             else
             {
-                LblInf.Content = "Пароли не совпадают";
+                MessageBox.Show("Пароли не совпадают");
             }
         }
         public string GetData(string Query)
@@ -96,16 +127,44 @@ namespace Marathon
 
             using (SqlConnection connection = new SqlConnection(@"Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
             {
-                try
-                {
+                
+               
                     string temp = String.Format(Query);
                     SqlCommand command = new SqlCommand(temp, connection);
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
                     connection.Close();
                     return false;
+                
+                
+
+            }
+        }
+
+       
+        
+        public void loadCountryData()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
+            {
+
+                string temp = String.Format(@"SELECT [CountryName] FROM [Country]");
+                SqlCommand command = new SqlCommand(temp, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    
+                    
+                        string result = reader.GetString(0);
+                        CountryList.Items.Add(result);
+                        CountryList.Text = result;
+                    
+                    
+
                 }
-                catch { return true;}
+
+                connection.Close();
 
             }
         }

@@ -67,7 +67,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MarathonDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="UserClass.cs" />
     <Compile Include="WinAdminAcc.xaml.cs">
       <DependentUpon>WinAdminAcc.xaml</DependentUpon>
     </Compile>

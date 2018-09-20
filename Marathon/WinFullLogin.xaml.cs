@@ -51,15 +51,15 @@ namespace Marathon
             string results = GetData(@"SELECT [FirstName] FROM [User] WHERE ([Email]='"+ TxtBoxEmail.Text+"') AND ([Password]='"+TxtBoxPassword.Text+"')");
             if (results == "Неверный логин или пароль")
             {
-                LblInf.Content = results;
+                MessageBox.Show("Неверный логин или пароль");
             }
             else if (results == "")
             {
-                LblInf.Content = "Неверный логин или пароль";
+                MessageBox.Show("Неверный логин или пароль");
             }
             else
             {
-                UserClass.FirstName = results;
+               
                 
                 var window = new WinLogin();
                 window.Owner = this;
