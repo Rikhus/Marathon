@@ -70,8 +70,7 @@
         <Label Content="Страна:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Column="7" Grid.Row="11" FontWeight="Bold" FontFamily="Arial"/>
         <ComboBox Name="CountryList" Height="30" Grid.Column="8" Grid.Row="11" VerticalAlignment="Top" Grid.ColumnSpan="4"/>
         <ComboBox Name="Gender" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="11">
-            <TextBlock>Мужской</TextBlock>
-            <TextBlock>Женский</TextBlock>
+            
         </ComboBox>
 
 

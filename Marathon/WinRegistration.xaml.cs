@@ -33,7 +33,7 @@ namespace Marathon
     {
         public WinRegistration()
         {
-            InitializeComponent(); loadTime(); loadCountryData();
+            InitializeComponent(); loadTime(); loadCountryData(); loadGenderData();
         }
         //кнопка назад
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -57,19 +57,20 @@ namespace Marathon
 
         private void BtnRegistration_Click(object sender, RoutedEventArgs e)
         {
-            string selectedGender = Gender.SelectedItem.ToString();
-            if (selectedGender != "") User.Gender = selectedGender;
-            if ((PswdBox.Password == PswdRepeatBox.Password) && (User.Gender != "") && (DateOfBirth.Text != "")&&(CountryList.SelectedItem.ToString()!=""))
+            User.Gender = Gender.SelectedItem.ToString(); ;
+            
+            if ((PswdBox.Password == PswdRepeatBox.Password) && (DateOfBirth.Text != "")&&(CountryList.SelectedItem.ToString()!=""))
             {
                 
                 User.Password = PswdBox.Password;
                 User.FirstName = TxtFirstName.Text;
                 User.LastName = TxtFirstName.Text;
                 User.Email = TxtEmail.Text;
-                User.DateOfBirth = DateOfBirth.Text;
-                User.DateOfBirth.Replace('.', '-');
+                User.DateOfBirth = DateOfBirth.SelectedDate.ToString();
+               
                 User.CountryName = CountryList.SelectedItem.ToString();
                 User.CountryCode=GetData(@"SELECT [CountryCode] FROM [Country] WHERE [CountryName] = '"+User.CountryName+"'");
+                
 
 
 
@@ -80,9 +81,9 @@ namespace Marathon
                 if (GetData(@"SELECT * FROM [User] WHERE [Email]='" + User.Email + "' AND [Password]='" + User.Password + "'") == "")
                 {
                     if ((!DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[RoleId])
-                    VALUES ('" + User.Email + "','" + User.Password + "','" + User.FirstName + "','" + User.LastName + "','R')")))
-                   // && !(DataBase(@"INSERT INTO [Runner] ([Email],[Gender],[DateOfBirth],[CountryCode]) VALUES
-                   // ('" + User.Email + "','" + User.Gender + "','" + User.DateOfBirth + "','" + User.CountryCode + "')")))
+                    VALUES ('" + User.Email + "','" + User.Password + "','" + User.FirstName + "','" + User.LastName + "','R')"))
+                   && !(DataBase(@"INSERT INTO [Runner] ([Email],[Gender],[DateOfBirth],[CountryCode]) VALUES
+                   ('" + User.Email + "','" + User.Gender + "','"+ User.DateOfBirth + "','" + User.CountryCode + "')")))
                     {
                         new WinRunnerAcc().Show(); Close();
                     }
@@ -162,6 +163,31 @@ namespace Marathon
                         CountryList.Text = result;
                     
                     
+
+                }
+
+                connection.Close();
+
+            }
+        }
+        public void loadGenderData()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
+            {
+
+                string temp = String.Format(@"SELECT [Gender] FROM [Gender]");
+                SqlCommand command = new SqlCommand(temp, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+
+
+                    string result = reader.GetString(0);
+                    Gender.Items.Add(result);
+                    Gender.Text = result;
+
+
 
                 }
 
