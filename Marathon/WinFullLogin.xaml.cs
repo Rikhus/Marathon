@@ -60,7 +60,7 @@ namespace Marathon
             else
             {
                 UserClass.FirstName = results;
-                LblInf.Content = results;
+                
                 var window = new WinLogin();
                 window.Owner = this;
                 window.Show();

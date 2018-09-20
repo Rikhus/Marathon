@@ -34,13 +34,13 @@ namespace Marathon
         //кнопка возврата на главную страницу
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            new WinFullLogin().Show();
             Close();
         }
         //кнопка выхода из аккаунта
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
         {
-            new WinLogin().Show();
+            new MainWindow().Show();
             Close();
         }
 

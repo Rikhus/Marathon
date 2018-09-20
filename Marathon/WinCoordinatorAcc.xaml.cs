@@ -35,7 +35,7 @@ namespace Marathon
         //кнопка возврата на главную страницу
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show(); Close();
+            new WinFullLogin().Show(); Close();
         }
         //кнопка выхода из аккаунта
         private void BtnLogout_Click(object sender, RoutedEventArgs e)

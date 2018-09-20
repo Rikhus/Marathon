@@ -48,9 +48,12 @@ namespace Marathon
         {
             if ((TxtPassword.Text == TxtPasswordRepeat.Text) && (TxtPassword.Text!=""))
             {
-                if(GetData(@"SELECT * FROM [User] WHERE [Email]='"+TxtEmail.Text+"' OR [Password]='" + TxtPassword + "'") == "")
+                if(GetData(@"SELECT * FROM [User] WHERE [Email]='"+TxtEmail.Text+"' AND [Password]='" + TxtPassword + "'") == "")
                 {
-                    DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[Gender]) VALUES ('"+TxtEmail.Text+"','"+TxtPassword+"','"+TxtFirstName.Text+"','"+TxtLastName+"','"+TxtGender+"')");
+                    if (!DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[RoleId]) VALUES ('" + TxtEmail.Text + "','" + TxtPassword.Text + "','" + TxtFirstName.Text + "','" + TxtLastName.Text + "','R')"))
+                    {
+                        new WinRunnerAcc().Show(); Close();
+                    }
                 }
                 else
                 {
@@ -87,7 +90,7 @@ namespace Marathon
 
             }
         }
-        public int DataBase(string Query)
+        public bool DataBase(string Query)
         {
 
 
@@ -100,9 +103,9 @@ namespace Marathon
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
                     connection.Close();
-                    return 0;
+                    return false;
                 }
-                catch { return 1;}
+                catch { return true;}
 
             }
         }
