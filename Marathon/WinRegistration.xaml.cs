@@ -295,7 +295,7 @@ namespace Marathon
                      openFileDialog.ShowDialog();
                      System.IO.StreamReader sr = new
                      System.IO.StreamReader(openFileDialog.FileName);
-                     TxtBoxImage.Text = openFileDialog.FileName;
+                     TxtBoxImage.Text = openFileDialog.SafeFileName;
                      sr.Close();
                      var ImageSrc = new BitmapImage(new Uri(openFileDialog.FileName));
                      image.Source = ImageSrc;
