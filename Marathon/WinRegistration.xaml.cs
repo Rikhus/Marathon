@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
+using Microsoft.Win32;
+
 namespace Marathon
 {
     public class User
@@ -273,6 +275,28 @@ namespace Marathon
                 connection.Close();
 
             }
+        }
+
+        private void BtnFileOpener_Click(object sender, RoutedEventArgs e)
+        {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Image Files(*.BMP;*.PNG;*.JPG;*.GIF)|*.BMP;*.PNG;*.JPG;*.GIF";
+                openFileDialog.FilterIndex = 1;
+                try
+                {
+                     openFileDialog.ShowDialog();
+                     System.IO.StreamReader sr = new
+                     System.IO.StreamReader(openFileDialog.FileName);
+                     TxtBoxImage.Text = openFileDialog.FileName;
+                     sr.Close();
+                     var ImageSrc = new BitmapImage(new Uri(openFileDialog.FileName));
+                     image.Source = ImageSrc;
+                }
+                catch
+                {
+                     TxtBoxImage.Text = "Файл не выбран";
+                }
+
         }
     }
 }

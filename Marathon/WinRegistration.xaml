@@ -58,9 +58,9 @@
         <TextBox Name="TxtFirstName" Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Text="" Grid.ColumnSpan="4"/>
         <TextBox Name="TxtLastName" Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="" Grid.RowSpan="2" Grid.ColumnSpan="4"/>
         <Label Content="Фото файл:" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="7" Grid.Row="6" FontFamily="Arial" FontWeight="Bold" Grid.ColumnSpan="3"/>
-        <TextBox Grid.Column="7" Grid.Row="7" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
-        <Button Content="Просмотр..." Grid.Column="10" Grid.Row="7" FontFamily="Arial" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Image Grid.Column="10"  Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+        <TextBox Name="TxtBoxImage" Grid.Column="7" Grid.Row="7" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
+        <Button Name="BtnFileOpener" Click="BtnFileOpener_Click" Content="Просмотр..." Grid.Column="10" Grid.Row="7" FontFamily="Arial" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Image Name="image" Stretch="Fill" Grid.Column="10"  Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
         <Label Content="Дата рождения:" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="7" Grid.Row="9" FontFamily="Arial" FontWeight="Bold" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <DatePicker Name="DateOfBirth" Grid.Column="9" Grid.Row="9" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
         <Button Name="BtnRegistration" Click="BtnRegistration_Click" Content="Регистрация" Grid.Column="3" Grid.Row="13" Background="#FF241D70" Foreground="#FFFDC13C" Grid.ColumnSpan="2"/>

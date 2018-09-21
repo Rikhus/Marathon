@@ -153,3 +153,7 @@ C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRegistration.g.cs
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRunnerMenu.g.cs
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRegistration.baml
 C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\WinRunnerMenu.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinAboutMarathon.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinMarathonMap.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinAboutMarathon.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinMarathonMap.baml

@@ -39,5 +39,11 @@ namespace Marathon
             LblTime.Content = have.Days + " дней " + have.Hours + " часов и " + have.Minutes + " минут до начала гонки";
             
         }
+
+        private void BtnMarathon_Click(object sender, RoutedEventArgs e)
+        {
+            new WinAboutMarathon().Show();
+            Close();
+        }
     }
 }

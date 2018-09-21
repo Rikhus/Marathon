@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\Desktop\Marathon\Marathon\App.xaml
-10595479732
+1273491263
 
-19-1982644379
+212112565219
 16-1966922768
-MainWindow.xaml;WinAdminAcc.xaml;WinContacts.xaml;WinCoordinatorAcc.xaml;WinFullLogin.xaml;WinLogin.xaml;WinMoreInf.xaml;WinRegistration.xaml;WinRunnerMenu.xaml;WinRunnerAcc.xaml;
+MainWindow.xaml;WinAboutMarathon.xaml;WinAdminAcc.xaml;WinContacts.xaml;WinCoordinatorAcc.xaml;WinFullLogin.xaml;WinLogin.xaml;WinMarathonMap.xaml;WinMoreInf.xaml;WinRegistration.xaml;WinRunnerMenu.xaml;WinRunnerAcc.xaml;
 
-True
+False
 

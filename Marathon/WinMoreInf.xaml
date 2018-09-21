@@ -35,7 +35,7 @@
         <Label Content="Подробная информация" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Background="{x:Null}" Grid.ColumnSpan="6"  FontFamily="Arial" FontSize="18"/>
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="12,6"/>
 
-        <Button Name="BtnMarathon" Content="Marathon Skills 2016" Grid.Column="1" Grid.Row="3" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
+        <Button Name="BtnMarathon" Content="Marathon Skills 2016" Click="BtnMarathon_Click" Grid.Column="1" Grid.Row="3" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
         <Button Name="BtnPrevRes" Content="Предыдущие&#xD;&#xA; результаты" Grid.Column="1" Grid.Row="6" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
         <Button Name="BtnBMI" Content="BMI калькулятор" Grid.Column="1" Grid.Row="9" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
         <Button Name="BtnHowLongMar" Content="Насколько долгий&#xD;&#xA;       марафон" Grid.Column="4" Grid.Row="3" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
