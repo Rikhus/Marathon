@@ -100,6 +100,9 @@
     <Compile Include="WinRunnerAcc.xaml.cs">
       <DependentUpon>WinRunnerAcc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinSponsorMenu.xaml.cs">
+      <DependentUpon>WinSponsorMenu.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -156,6 +159,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinSponsorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -200,6 +207,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="marathon-skills-2016-marathon-map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="marathon-skills-2016-marathon-photos\teatro-municipal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="marathon-skills-2016-marathon-photos\marathon-image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="marathon-skills-2016-marathon-photos\ibirapuera-park-lake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="marathon-skills-2016-marathon-photos\banco-banespa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

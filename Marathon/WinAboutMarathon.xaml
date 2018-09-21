@@ -27,10 +27,10 @@
         <Label Content="Marathon Skills 2016" FontFamily="Arial" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#00903e" Foreground="#fdc13c" Grid.ColumnSpan="5"/>
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="1,6,12,6" Grid.Column="1"/>
         <Button Name="BtnMap" Click="BtnMap_Click" Content="Карта марафона" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Background="#FF241D70" Foreground="#FFE7C03C" FontFamily="Arial" FontSize="16"/>
-        <Image Grid.Column="1" Grid.Row="4"/>
-        <Image Grid.Column="3" Grid.Row="6"/>
-        <Image Grid.Column="3" Grid.Row="4"/>
-        <Image Grid.Column="1" Grid.Row="6"/>
-
+        <Image Stretch="Fill" Source="marathon-skills-2016-marathon-photos/ibirapuera-park-lake.jpg" Grid.Column="1" Grid.Row="4"/>
+        <Image Source="marathon-skills-2016-marathon-photos/banco-banespa.jpg" Grid.Column="3" Grid.Row="6"/>
+        <Image Stretch="Fill" Source="marathon-skills-2016-marathon-photos/marathon-image.jpg" Grid.Column="3" Grid.Row="4"/>
+        <Image Stretch="Fill" Source="marathon-skills-2016-marathon-photos/teatro-municipal.jpg" Grid.Column="1" Grid.Row="6"/>
+        <Label x:Name="LblTime" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="7" Grid.ColumnSpan="6" Foreground="#FFFDC100" Background="#FF00903E" FontFamily="Arial" FontSize="18.667" FontWeight="Bold"/>
     </Grid>
 </Window>

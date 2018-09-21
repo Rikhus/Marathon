@@ -21,7 +21,7 @@ namespace Marathon
     {
         public WinAboutMarathon()
         {
-            InitializeComponent();
+            InitializeComponent();loadTime();
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -35,6 +35,14 @@ namespace Marathon
         {
             new WinMarathonMap().Show();
             Close();
+        }
+        public void loadTime()
+        {
+            DateTime now = DateTime.Now;
+            DateTime start = new DateTime(2018, 11, 24, 6, 00, 00);
+            TimeSpan have = start.Subtract(now);
+            if (have.Minutes < 0) { LblTime.Content = "   Марафон закончился"; return; }
+            LblTime.Content = have.Days + " дней " + have.Hours + " часов и " + have.Minutes + " минут до начала гонки";
         }
     }
 }
