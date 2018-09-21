@@ -54,48 +54,96 @@ namespace Marathon
             if (have.Minutes < 0) { LblTime.Content = "   Марафон закончился"; return; }
             LblTime.Content = have.Days + " дней " + have.Hours + " часов и " + have.Minutes + " минут до начала гонки";
         }
-
+        //присвоение атрибутам класса пользователя значеий из полей ввода/выбора
         private void BtnRegistration_Click(object sender, RoutedEventArgs e)
         {
-            User.Gender = Gender.SelectedItem.ToString(); ;
+            User.Gender = Gender.SelectedItem.ToString(); 
             
-            if ((PswdBox.Password == PswdRepeatBox.Password) && (DateOfBirth.Text != "")&&(CountryList.SelectedItem.ToString()!=""))
+            if (CountryList.SelectedItem.ToString()!="")
             {
-                
-                User.Password = PswdBox.Password;
-                User.FirstName = TxtFirstName.Text;
-                User.LastName = TxtFirstName.Text;
-                User.Email = TxtEmail.Text;
-                User.DateOfBirth = DateOfBirth.SelectedDate.ToString();
-               
-                User.CountryName = CountryList.SelectedItem.ToString();
-                User.CountryCode=GetData(@"SELECT [CountryCode] FROM [Country] WHERE [CountryName] = '"+User.CountryName+"'");
-                
+                if (DateOfBirth.Text != "")
+                {
+
+                    User.Password = PswdBox.Password;
+                    User.FirstName = TxtFirstName.Text;
+                    User.LastName = TxtFirstName.Text;
+                    User.Email = TxtEmail.Text;
+                    User.DateOfBirth = DateOfBirth.SelectedDate.ToString();
+
+                    User.CountryName = CountryList.SelectedItem.ToString();
+                    //присвоение countrycode из таблицы в соответствии названию страны
+                    User.CountryCode = GetData(@"SELECT [CountryCode] FROM [Country] WHERE [CountryName] = '" + User.CountryName + "'");
+                }
+                else
+                {
+                    MessageBox.Show("Не выбрана дата рождения");
+                    return;
+                }
 
 
 
             }
-
+            char[] EmailChar = User.Email.ToCharArray();
+            //проверка по маске
+            for(int x = 0; x < User.Email.Length; x++)
+            {
+                if (EmailChar[x] == '@')
+                {
+                    
+                    try
+                    {
+                        if (EmailChar[x + 1] != ' ' && EmailChar[x + 2] != ' ' && EmailChar[x + 3] != ' ')
+                        {
+                            break;
+                        }
+                    }
+                    catch(Exception)
+                    {
+                        MessageBox.Show("Неверный формат Email");
+                        return;
+                    }
+                }
+                else if(x==(User.Email.Length-1))
+                {
+                    MessageBox.Show("Неверный формат Email");
+                    return;
+                }
+            }
+            //проверка заполнения форм ввода
             if ((PswdBox.Password == PswdRepeatBox.Password) && (PswdBox.Password != ""))
             {
-                if (GetData(@"SELECT * FROM [User] WHERE [Email]='" + User.Email + "' AND [Password]='" + User.Password + "'") == "")
+                //проверка выбора пола
+                if (User.Gender != "")
                 {
-                    if ((!DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[RoleId])
-                    VALUES ('" + User.Email + "','" + User.Password + "','" + User.FirstName + "','" + User.LastName + "','R')"))
-                   && !(DataBase(@"INSERT INTO [Runner] ([Email],[Gender],[DateOfBirth],[CountryCode]) VALUES
-                   ('" + User.Email + "','" + User.Gender + "','"+ User.DateOfBirth + "','" + User.CountryCode + "')")))
+                    //проверка на зарегистрированность такого email
+                    if (GetData(@"SELECT * FROM [User] WHERE [Email]='" + User.Email + "'") == "")
                     {
-                        new WinRunnerAcc().Show(); Close();
+                        //запполнение таблиц данными
+                        if ((!DataBase(@"INSERT INTO [User] ([Email],[Password],[FirstName],[LastName],[RoleId])
+                    VALUES ('" + User.Email + "','" + User.Password + "','" + User.FirstName + "','" + User.LastName + "','R')"))
+                       && !(DataBase(@"INSERT INTO [Runner] ([Email],[Gender],[DateOfBirth],[CountryCode]) VALUES
+                   ('" + User.Email + "','" + User.Gender + "','" + User.DateOfBirth + "','" + User.CountryCode + "')")))
+                        {
+                            new WinRunnerAcc().Show(); Close();
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Email и/или пароль заняты");
+                        return;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Email и/или пароль заняты");
+                    MessageBox.Show("Пол не выбран");
+                    return;
                 }
             }
             else
             {
                 MessageBox.Show("Пароли не совпадают");
+                return;
             }
         }
         public string GetData(string Query)

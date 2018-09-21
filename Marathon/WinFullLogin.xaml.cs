@@ -47,7 +47,7 @@ namespace Marathon
         //переход в окно авторизации
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            // new WinLogin().Show();
+           
             string results = GetData(@"SELECT [FirstName] FROM [User] WHERE ([Email]='"+ TxtBoxEmail.Text+"') AND ([Password]='"+TxtBoxPassword.Text+"')");
             if (results == "Неверный логин или пароль")
             {
