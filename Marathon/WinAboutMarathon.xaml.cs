@@ -30,5 +30,11 @@ namespace Marathon
             Close();
 
         }
+
+        private void BtnMap_Click(object sender, RoutedEventArgs e)
+        {
+            new WinMarathonMap().Show();
+            Close();
+        }
     }
 }
