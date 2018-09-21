@@ -59,39 +59,47 @@ namespace Marathon
         //присвоение атрибутам класса пользователя значеий из полей ввода/выбора
         private void BtnRegistration_Click(object sender, RoutedEventArgs e)
         {
-            User.Gender = Gender.SelectedItem.ToString(); 
-            
-            if (CountryList.SelectedItem.ToString()!="")
+            User.Gender = Gender.SelectedItem.ToString();
+
+            if (TxtEmail.Text != "")
             {
-                if (DateOfBirth.Text != "")
+                if (CountryList.SelectedItem.ToString() != "")
                 {
-                    if (TxtFirstName.Text != "" && TxtLastName.Text != "")
+                    if (DateOfBirth.Text != "")
                     {
+                        if (TxtFirstName.Text != "" && TxtLastName.Text != "")
+                        {
 
-                        User.Password = PswdBox.Password;
-                        User.FirstName = TxtFirstName.Text;
-                        User.LastName = TxtFirstName.Text;
-                        User.Email = TxtEmail.Text;
-                        User.DateOfBirth = DateOfBirth.SelectedDate.ToString();
+                            User.Password = PswdBox.Password;
+                            User.FirstName = TxtFirstName.Text;
+                            User.LastName = TxtFirstName.Text;
+                            User.Email = TxtEmail.Text;
+                            User.DateOfBirth = DateOfBirth.SelectedDate.ToString();
 
-                        User.CountryName = CountryList.SelectedItem.ToString();
-                        //присвоение countrycode из таблицы в соответствии названию страны
-                        User.CountryCode = GetData(@"SELECT [CountryCode] FROM [Country] WHERE [CountryName] = '" + User.CountryName + "'");
+                            User.CountryName = CountryList.SelectedItem.ToString();
+                            //присвоение countrycode из таблицы в соответствии названию страны
+                            User.CountryCode = GetData(@"SELECT [CountryCode] FROM [Country] WHERE [CountryName] = '" + User.CountryName + "'");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Поле Имя и/или поле Фамилия не заполнены");
+                            return;
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Поле Имя и/или поле Фамилия не заполнены");
+                        MessageBox.Show("Не выбрана дата рождения");
                         return;
                     }
+
+
+
                 }
-                else
-                {
-                    MessageBox.Show("Не выбрана дата рождения");
-                    return;
-                }
-
-
-
+            }
+            else
+            {
+                MessageBox.Show("Email не может быть пустым");
+                return;
             }
             char[] EmailChar = User.Email.ToCharArray();
             //проверка по маске
