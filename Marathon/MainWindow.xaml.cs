@@ -49,5 +49,11 @@ namespace Marathon
             if (have.Minutes < 0) { LblTime.Content = "   Марафон закончился"; return; }
             LblTime.Content = have.Days + " дней " + have.Hours + " часов и " + have.Minutes + " минут до начала гонки";
         }
+
+        private void BtnSponsor_Click(object sender, RoutedEventArgs e)
+        {
+            new WinSponsorMenu().Show();
+            Close();
+        }
     }
 }

@@ -40,13 +40,13 @@
             <RowDefinition Height="34*"/>
         </Grid.RowDefinitions>
         <Label Content="Marathon Skills 2016" FontFamily="Arial" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#00903e" Foreground="#fdc13c" Grid.ColumnSpan="13"/>
-        <Button Name="BtnBack" Content="Назад" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="1,6,12,6" />
+        <Button Name="BtnBack" Click="BtnCancel_Click" Content="Назад" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="1,6,12,6" />
         <Button Content="Заплатить" Grid.Column="5" Grid.Row="12" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Grid.ColumnSpan="3"/>
-        <Button Grid.ColumnSpan="3" Content="Отмена" Grid.Column="9" Grid.Row="12" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
-        <TextBox Grid.ColumnSpan="3" Grid.Column="7" Grid.Row="10" TextWrapping="Wrap" Text=""/>
-        <Button Name="BtnMinus" Content="-" Grid.Column="5" Grid.Row="10" FontWeight="Bold" FontSize="22" VerticalContentAlignment="Top"/>
-        <Button Name="BtnPlus" Content="+" Grid.Column="11" Grid.Row="10" Margin="3,0,0,0" FontWeight="Bold" FontSize="22" VerticalContentAlignment="Top"/>
-        <Label Content="" Grid.Column="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="4" FontFamily="Arial" FontWeight="Bold" FontSize="48"/>
+        <Button Name="BtnCancel" Click="BtnCancel_Click" Grid.ColumnSpan="3" Content="Отмена" Grid.Column="9" Grid.Row="12" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
+        <TextBox MaxLength="5" SelectionChanged="TxtAmount_SelectionChanged" Name="TxtAmount" Grid.ColumnSpan="3" Grid.Column="7" Grid.Row="10" TextWrapping="Wrap" Text=""/>
+        <Button Name="BtnMinus" Click="BtnMinus_Click" Content="-" Grid.Column="5" Grid.Row="10" FontWeight="Bold" FontSize="22" VerticalContentAlignment="Top"/>
+        <Button Name="BtnPlus" Click="BtnPlus_Click" Content="+" Grid.Column="11" Grid.Row="10" Margin="3,0,0,0" FontWeight="Bold" FontSize="22" VerticalContentAlignment="Top"/>
+        <Label Name="LblAmount" Content="" Grid.Column="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="6" FontFamily="Arial" FontWeight="Bold" FontSize="48"/>
         <Label Content="Сумма пожертвования" Grid.Column="5" Grid.Row="6" Grid.ColumnSpan="7" FontWeight="Bold" FontFamily="Arial" FontSize="18" Grid.RowSpan="2"/>
         <Label Content="Благотворительность" Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="7" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
         <Label Content="Спонсор бегуна" Grid.ColumnSpan="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="1" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
@@ -60,11 +60,11 @@
         <Label Content="Срок действия:" Grid.Row="10" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14" FontFamily="Arial"/>
         <Label Content="CVC:" Grid.Row="11" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14" FontFamily="Arial"/>
         <Label x:Name="LblTime" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="13" Grid.ColumnSpan="13" Foreground="#FFFDC100" Background="#FF00903E" FontFamily="Arial" FontSize="18.667" FontWeight="Bold"/>
-        <xctk:MaskedTextBox Grid.Column="1" Grid.Row="10" x:Name="TimeOfAction" Mask="00/00/0000"/>
+        <xctk:MaskedTextBox Grid.Column="1" Grid.Row="10" x:Name="TimeOfAction" Mask="00/00/0000" Grid.ColumnSpan="2"/>
         <xctk:MaskedTextBox Grid.Column="1" Grid.Row="11" x:Name="CVC" Mask="0 0 0"/>
         <TextBox Grid.Column="1" Grid.Row="5" Grid.RowSpan="2" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
         <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
-        <xctk:MaskedTextBox Grid.Column="1" Grid.Row="9" x:Name="CardNum" Mask="0000 0000 0000 0000" Grid.ColumnSpan="2"/>
+        <xctk:MaskedTextBox Grid.Column="1" Grid.Row="9" x:Name="CardNum" Mask="0000 0000 0000 0000" Grid.ColumnSpan="3"/>
 
         <ComboBox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="7"/>
     </Grid>

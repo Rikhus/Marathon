@@ -27,7 +27,7 @@
             <RowDefinition Height="34*"/>
         </Grid.RowDefinitions>
         <Button x:Name="BtnRunner" Click="BtnRunner_Click" Content="Я хочу стать бегуном" Grid.Row="3" Grid.Column="1" Background="#FF241D70" Foreground="#FFFDC100" FontFamily="Arial" FontSize="16"/>
-        <Button x:Name="BtnSponsor" Content="Я хочу стать спонсором бегуна" Grid.Row="5" Grid.Column="1" Background="#FF241D70" Foreground="#FFFDC100" FontFamily="Arial" FontSize="16"/>
+        <Button Name="BtnSponsor" Click="BtnSponsor_Click" Content="Я хочу стать спонсором бегуна" Grid.Row="5" Grid.Column="1" Background="#FF241D70" Foreground="#FFFDC100" FontFamily="Arial" FontSize="16"/>
         <Button x:Name="BtnMoreInf" Click="BtnMoreInf_Click" Content="Я хочу узнать больше о событии" Grid.Row="7" Grid.Column="1" Background="#FF241D70" Foreground="#FFFDC100" FontFamily="Arial" FontSize="16"/>
         <Button x:Name="BtnLogin" Click="BtnLogin_Click"  Content="Login" Grid.Row="7" Grid.Column="3" Background="#FF241D70" Foreground="#FFFDC100" FontFamily="Arial" FontSize="16"/>
         <Label Content="Marathon Skills 2016" FontFamily="Arial" VerticalContentAlignment="Center" FontSize="26.667" FontWeight="Bold" HorizontalContentAlignment="Center" Background="#FF00903E" Foreground="#FFFDC100" Grid.ColumnSpan="5"/>
