@@ -21,7 +21,7 @@ namespace Marathon
     {
         public WinSponsorMenu()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }

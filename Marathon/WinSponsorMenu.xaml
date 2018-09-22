@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Marathon"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="Marathon Skills 2016 - Sponsor a runner" Height="450" Width="700" WindowStartupLocation="CenterScreen">
     <Grid>
@@ -59,12 +60,12 @@
         <Label Content="Срок действия:" Grid.Row="10" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14" FontFamily="Arial"/>
         <Label Content="CVC:" Grid.Row="11" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14" FontFamily="Arial"/>
         <Label x:Name="LblTime" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="13" Grid.ColumnSpan="13" Foreground="#FFFDC100" Background="#FF00903E" FontFamily="Arial" FontSize="18.667" FontWeight="Bold"/>
+        <xctk:MaskedTextBox Grid.Column="1" Grid.Row="10" x:Name="TimeOfAction" Mask="00/00/0000"/>
+        <xctk:MaskedTextBox Grid.Column="1" Grid.Row="11" x:Name="CVC" Mask="0 0 0"/>
         <TextBox Grid.Column="1" Grid.Row="5" Grid.RowSpan="2" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
         <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
-        <TextBox Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
-        <TextBox Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" Text=""/>
-        <TextBox Grid.Column="1" Grid.Row="11" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3"/>
-        <TextBox Grid.Column="3" Grid.Row="10" TextWrapping="Wrap" Text=""/>
+        <xctk:MaskedTextBox Grid.Column="1" Grid.Row="9" x:Name="CardNum" Mask="0000 0000 0000 0000" Grid.ColumnSpan="2"/>
+
         <ComboBox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="7"/>
     </Grid>
 </Window>
