@@ -43,7 +43,7 @@
         <Button Name="BtnBack" Click="BtnCancel_Click" Content="Назад" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Margin="1,6,12,6" />
         <Button Content="Заплатить" Grid.Column="5" Grid.Row="12" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16" Grid.ColumnSpan="3"/>
         <Button Name="BtnCancel" Click="BtnCancel_Click" Grid.ColumnSpan="3" Content="Отмена" Grid.Column="9" Grid.Row="12" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
-        <TextBox MaxLength="5" SelectionChanged="TxtAmount_SelectionChanged" Name="TxtAmount" Grid.ColumnSpan="3" Grid.Column="7" Grid.Row="10" TextWrapping="Wrap" Text=""/>
+        <TextBox MaxLength="5" SelectionChanged="TxtAmount_SelectionChanged" Name="TxtAmount" Grid.ColumnSpan="3" Grid.Column="7" Grid.Row="10" TextWrapping="Wrap" Text="r" FontSize="18" FontWeight="Bold"/>
         <Button Name="BtnMinus" Click="BtnMinus_Click" Content="-" Grid.Column="5" Grid.Row="10" FontWeight="Bold" FontSize="22" VerticalContentAlignment="Top"/>
         <Button Name="BtnPlus" Click="BtnPlus_Click" Content="+" Grid.Column="11" Grid.Row="10" Margin="3,0,0,0" FontWeight="Bold" FontSize="22" VerticalContentAlignment="Top"/>
         <Label Name="LblAmount" Content="" Grid.Column="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="6" FontFamily="Arial" FontWeight="Bold" FontSize="48"/>
