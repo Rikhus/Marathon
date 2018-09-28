@@ -47,26 +47,30 @@ namespace Marathon
         //переход в окно авторизации
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-           
-            string results = GetData(@"SELECT [FirstName] FROM [User] WHERE ([Email]='"+ TxtBoxEmail.Text+"') AND ([Password]='"+TxtBoxPassword.Text+"')");
+            if (TxtBoxEmail.Text == "")
+            {
+                if (TxtBoxPassword.Password == "")
+                {
+                    var window = new WinLogin();
+                    window.Owner = this;
+                    window.Show();
+                    return;
+                }
+            }
+            string results = GetData(@"SELECT [FirstName] FROM [User] WHERE ([Email]='"+ TxtBoxEmail.Text+"') AND ([Password]='"+TxtBoxPassword.Password+"')");
             if (results == "Неверный логин или пароль")
             {
                 MessageBox.Show("Неверный логин или пароль");
-                var window = new WinLogin();
-                window.Owner = this;
-                window.Show();
+                
             }
             else if (results == "")
             {
                 MessageBox.Show("Неверный логин или пароль");
-                var window = new WinLogin();
-                window.Owner = this;
-                window.Show();
             }
             else
             {
-               
-                string Role= GetData(@"SELECT [Roleid] FROM [User] WHERE ([Email]='" + TxtBoxEmail.Text + "') AND ([Password]='" + TxtBoxPassword.Text + "')");
+
+                string Role = GetData(@"SELECT [Roleid] FROM [User] WHERE ([Email]='" + TxtBoxEmail.Text + "') AND ([Password]='" + TxtBoxPassword.Password + "')");
                 if (Role == "A")
                 {
                     new WinAdminAcc().Show();

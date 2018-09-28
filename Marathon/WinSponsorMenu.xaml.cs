@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Marathon
     {
         public WinSponsorMenu()
         {
-            InitializeComponent(); loadTime();TxtAmount.Text = "50"; LblAmount.Content ="$"+TxtAmount.Text; 
+            InitializeComponent(); loadTime();TxtAmount.Text = "50"; LblAmount.Content ="$"+TxtAmount.Text; loadRunnerData();
         }
 
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
@@ -67,6 +68,36 @@ namespace Marathon
             if ((string)LblAmount.Content != TxtAmount.Text)
             {
                 LblAmount.Content = "$" + TxtAmount.Text;
+            }
+        }
+
+        private void BtnPay_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        public void loadRunnerData()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
+            {
+
+                string temp = String.Format(@"SELECT [Firstname],[LastName] FROM [User] WHERE [RoleId]='R'");
+                SqlCommand command = new SqlCommand(temp, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                
+                while (reader.Read())
+                { 
+                    string result = reader.GetString(0);
+                    result += " " + reader.GetString(1);
+                    RunnersSel.Items.Add(result);
+                    RunnersSel.Text = result;
+
+
+
+                }
+
+                connection.Close();
+
             }
         }
     }

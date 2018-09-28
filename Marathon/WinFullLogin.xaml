@@ -43,8 +43,9 @@
         <Button Name="BtnLogin" Click="BtnLogin_Click" Content="Login" Grid.Column="1" Grid.Row="7" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
         <Button Name="BtnCancel" Click="BtnCancel_Click" Content="Cancel" Grid.Column="3" Grid.Row="7" Background="#241d70" Foreground="#fdc13c" FontFamily="Arial" FontSize="16"/>
         <TextBox Name="TxtBoxEmail" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" FontFamily="Arial" FontSize="16"/>
-        <TextBox Name="TxtBoxPassword" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" FontFamily="Arial" FontSize="16" />
+
         <Label Name="LblInf" Content="" Grid.Row="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="3" Grid.Column="1" FontFamily="Arial"/>
+        <PasswordBox Name="TxtBoxPassword" Grid.Column="1" FontSize="23" Grid.Row="5" Grid.ColumnSpan="3"/>
 
 
     </Grid>
