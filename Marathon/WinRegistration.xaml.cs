@@ -158,6 +158,7 @@ namespace Marathon
                            && !(DataBase(@"INSERT INTO [Runner] ([Email],[Gender],[DateOfBirth],[CountryCode]) VALUES
                    ('" + User.Email + "','" + User.Gender + "','" + User.DateOfBirth + "','" + User.CountryCode + "')")))
                             {
+                                MessageBox.Show("Регистрация прошла успешно!");
                                 new WinRunnerAcc().Show(); Close();
                             }
                         }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\
+C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\
 Marathon
 none
 false
 DEBUG;TRACE
-C:\Users\Rishat\Desktop\Marathon\Marathon\App.xaml
-13-1260402703
+C:\Users\wsr\Desktop\Marathon\Marathon\App.xaml
+14-1793612240
 
-22-593251438
-22-1473297921
-MainWindow.xaml;WinAboutMarathon.xaml;WinAdminAcc.xaml;WinContacts.xaml;WinCoordinatorAcc.xaml;WinFullLogin.xaml;WinLogin.xaml;WinMarathonMap.xaml;WinMoreInf.xaml;WinRegistration.xaml;WinRunnerMenu.xaml;WinRunnerAcc.xaml;WinSponsorMenu.xaml;
+23-488507838
+22-1648714956
+MainWindow.xaml;WinAboutMarathon.xaml;WinAdminAcc.xaml;WinContacts.xaml;WinCoordinatorAcc.xaml;WinFullLogin.xaml;WinLogin.xaml;WinMarathonMap.xaml;WinMoreInf.xaml;WinPrevRes.xaml;WinRegistration.xaml;WinRunnerMenu.xaml;WinRunnerAcc.xaml;WinSponsorMenu.xaml;
 
 False
 

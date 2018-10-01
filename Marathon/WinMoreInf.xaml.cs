@@ -45,5 +45,11 @@ namespace Marathon
             new WinAboutMarathon().Show();
             Close();
         }
+
+        private void BtnPrevRes_Click(object sender, RoutedEventArgs e)
+        {
+            new WinPrevRes().Show();
+            Close();
+        }
     }
 }

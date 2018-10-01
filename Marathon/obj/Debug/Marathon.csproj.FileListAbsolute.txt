@@ -202,7 +202,6 @@ C:\Users\wsr\Desktop\Marathon\Marathon\bin\Debug\ro\Xceed.Wpf.AvalonDock.resourc
 C:\Users\wsr\Desktop\Marathon\Marathon\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\wsr\Desktop\Marathon\Marathon\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\wsr\Desktop\Marathon\Marathon\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.csprojAssemblyReference.cache
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\MainWindow.g.cs
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinAboutMarathon.g.cs
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinAdminAcc.g.cs
@@ -239,3 +238,5 @@ C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.csproj.CoreCompileInpu
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.csproj.CopyComplete
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.exe
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.pdb
+C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinPrevRes.g.cs
+C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinPrevRes.baml

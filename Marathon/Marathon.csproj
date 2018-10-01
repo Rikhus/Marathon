@@ -109,6 +109,9 @@
     <Compile Include="WinMoreInf.xaml.cs">
       <DependentUpon>WinMoreInf.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinPrevRes.xaml.cs">
+      <DependentUpon>WinPrevRes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinRegistration.xaml.cs">
       <DependentUpon>WinRegistration.xaml</DependentUpon>
     </Compile>
@@ -162,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinMoreInf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinPrevRes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
