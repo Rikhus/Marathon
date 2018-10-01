@@ -240,3 +240,4 @@ C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.exe
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.pdb
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinPrevRes.g.cs
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinPrevRes.baml
+C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.csprojAssemblyReference.cache

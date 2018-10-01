@@ -95,6 +95,7 @@ namespace Marathon
 
 
                 }
+                RunnersSel.SelectedIndex = 0;
 
                 connection.Close();
 
