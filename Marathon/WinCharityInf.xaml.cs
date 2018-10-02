@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace Marathon
 {
     /// <summary>
-    /// Логика взаимодействия для WinMoreInf.xaml
+    /// Логика взаимодействия для WinCharityInf.xaml
     /// </summary>
-    public partial class WinMoreInf : Window
+    public partial class WinCharityInf : Window
     {
-        public WinMoreInf()
+        public WinCharityInf()
         {
-            InitializeComponent(); loadTime();
-        }
-        //кнопка возврата на главный экран
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
-            new MainWindow().Show();
-            Close();
+            InitializeComponent();loadTime();
         }
         //метод отсчеча времени до конца марафона
         public void loadTime()
@@ -37,29 +31,12 @@ namespace Marathon
             TimeSpan have = start.Subtract(now);
             if (have.Minutes < 0) { LblTime.Content = "   Марафон закончился"; return; }
             LblTime.Content = have.Days + " дней " + have.Hours + " часов и " + have.Minutes + " минут до начала гонки";
-            
-        }
-
-        private void BtnMarathon_Click(object sender, RoutedEventArgs e)
-        {
-            new WinAboutMarathon().Show();
-            Close();
-        }
-
-        private void BtnPrevRes_Click(object sender, RoutedEventArgs e)
-        {
-            new WinPrevRes().Show();
-            Close();
-        }
-
-        private void BtnBMI_Click(object sender, RoutedEventArgs e)
-        {
 
         }
 
-        private void BtnCharityInf_Click(object sender, RoutedEventArgs e)
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            
+            new WinMoreInf().Show(); Close();
         }
     }
 }

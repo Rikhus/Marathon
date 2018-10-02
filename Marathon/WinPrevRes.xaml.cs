@@ -48,7 +48,7 @@ namespace Marathon
             using (SqlConnection connection = new SqlConnection(@"Data Source=192.168.3.168;Initial Catalog=Marathon;User ID=admin;Password=Qwerty1234"))
             {
 
-                string temp = String.Format(@"SELECT * FROM [Runner]");
+                string temp = String.Format(@"SELECT * FROM [Runner],");
                 SqlCommand command = new SqlCommand(temp, connection);
                 connection.Open();
                 using (SqlCommand cmdSel = new SqlCommand(temp, connection))

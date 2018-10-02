@@ -91,6 +91,9 @@
     <Compile Include="WinAdminAcc.xaml.cs">
       <DependentUpon>WinAdminAcc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinCharityInf.xaml.cs">
+      <DependentUpon>WinCharityInf.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinContacts.xaml.cs">
       <DependentUpon>WinContacts.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinAdminAcc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinCharityInf.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

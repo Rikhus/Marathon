@@ -27,6 +27,9 @@ namespace Marathon
         public static string Gender;
         public static string CountryName;
         public static string CountryCode;
+        
+        
+        
     }
     /// <summary>
     /// Логика взаимодействия для WinRegistration.xaml
