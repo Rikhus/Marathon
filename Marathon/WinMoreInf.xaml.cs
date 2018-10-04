@@ -59,7 +59,7 @@ namespace Marathon
 
         private void BtnCharityInf_Click(object sender, RoutedEventArgs e)
         {
-            
+            new WinCharityInf().Show(); Close();
         }
     }
 }

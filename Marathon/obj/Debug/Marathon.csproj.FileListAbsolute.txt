@@ -241,3 +241,5 @@ C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.pdb
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinPrevRes.g.cs
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinPrevRes.baml
 C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\Marathon.csprojAssemblyReference.cache
+C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinCharityInf.g.cs
+C:\Users\wsr\Desktop\Marathon\Marathon\obj\Debug\WinCharityInf.baml

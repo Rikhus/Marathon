@@ -8,6 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-marathon-photos/banco-banespa.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/arise-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/aves-do-brazil-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/clara-santos-oliveira-institute-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/conquer-cancer-brazil.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/diabetes-brazil-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/heart-health-sao-paulo-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/human-rights-centre-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/oxfam-international-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/querstadtein-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/save-the-children-fund-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/stay-pumped-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/the-red-cross-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/upbeat-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("marathon-skills-2016-charity-data/wwsm-rescue-logo.png")]
 
 

@@ -214,6 +214,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="marathon-skills-2016-charity-data\charity-descriptions.pdf" />
+    <None Include="marathon-skills-2016-charity-data\charity-logos.pptx" />
     <None Include="MarathonDataSet.xsc">
       <DependentUpon>MarathonDataSet.xsd</DependentUpon>
     </None>
@@ -251,6 +253,22 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="marathon-skills-2016-marathon-photos\banco-banespa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="marathon-skills-2016-charity-data\arise-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\aves-do-brazil-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\clara-santos-oliveira-institute-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\conquer-cancer-brazil.png" />
+    <Resource Include="marathon-skills-2016-charity-data\diabetes-brazil-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\heart-health-sao-paulo-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\human-rights-centre-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\oxfam-international-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\querstadtein-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\save-the-children-fund-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\stay-pumped-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\the-red-cross-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\upbeat-logo.png" />
+    <Resource Include="marathon-skills-2016-charity-data\wwsm-rescue-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
