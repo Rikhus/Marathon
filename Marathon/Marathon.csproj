@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDD17927-A186-41CD-AE47-8E19C00BD926}</ProjectGuid>
+    <ProjectGuid>{75E666DE-2355-4630-98BF-63DD5991E595}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Marathon</RootNamespace>
     <AssemblyName>Marathon</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,14 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,76 +49,14 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.DataGrid, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Xceed.Wpf.Toolkit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MarathonDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MarathonDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="WinAboutMarathon.xaml.cs">
-      <DependentUpon>WinAboutMarathon.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinAdminAcc.xaml.cs">
-      <DependentUpon>WinAdminAcc.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinCharityInf.xaml.cs">
-      <DependentUpon>WinCharityInf.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinContacts.xaml.cs">
-      <DependentUpon>WinContacts.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinCoordinatorAcc.xaml.cs">
-      <DependentUpon>WinCoordinatorAcc.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinFullLogin.xaml.cs">
-      <DependentUpon>WinFullLogin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinLogin.xaml.cs">
-      <DependentUpon>WinLogin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinMarathonMap.xaml.cs">
-      <DependentUpon>WinMarathonMap.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinMoreInf.xaml.cs">
-      <DependentUpon>WinMoreInf.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinPrevRes.xaml.cs">
-      <DependentUpon>WinPrevRes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinRegistration.xaml.cs">
-      <DependentUpon>WinRegistration.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinRunnerMenu.xaml.cs">
-      <DependentUpon>WinRunnerMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinRunnerAcc.xaml.cs">
-      <DependentUpon>WinRunnerAcc.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WinSponsorMenu.xaml.cs">
-      <DependentUpon>WinSponsorMenu.xaml</DependentUpon>
+    <Compile Include="WinRegAsRunner.xaml.cs">
+      <DependentUpon>WinRegAsRunner.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -139,59 +70,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WinAboutMarathon.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinAdminAcc.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinCharityInf.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinContacts.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinCoordinatorAcc.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinFullLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinMarathonMap.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinMoreInf.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinPrevRes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinRegistration.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinRunnerMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinRunnerAcc.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WinSponsorMenu.xaml">
+    <Page Include="WinRegAsRunner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -214,68 +93,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="marathon-skills-2016-charity-data\charity-descriptions.pdf" />
-    <None Include="marathon-skills-2016-charity-data\charity-logos.pptx" />
-    <None Include="MarathonDataSet.xsc">
-      <DependentUpon>MarathonDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MarathonDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MarathonDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MarathonDataSet.xss">
-      <DependentUpon>MarathonDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="marathon-skills-2016-marathon-map.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="marathon-skills-2016-marathon-photos\teatro-municipal.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="marathon-skills-2016-marathon-photos\marathon-image.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="marathon-skills-2016-marathon-photos\ibirapuera-park-lake.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="marathon-skills-2016-marathon-photos\banco-banespa.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="marathon-skills-2016-charity-data\arise-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\aves-do-brazil-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\clara-santos-oliveira-institute-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\conquer-cancer-brazil.png" />
-    <Resource Include="marathon-skills-2016-charity-data\diabetes-brazil-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\heart-health-sao-paulo-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\human-rights-centre-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\oxfam-international-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\querstadtein-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\save-the-children-fund-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\stay-pumped-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\the-red-cross-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\upbeat-logo.png" />
-    <Resource Include="marathon-skills-2016-charity-data\wwsm-rescue-logo.png" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

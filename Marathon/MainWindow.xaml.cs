@@ -15,45 +15,32 @@ using System.Windows.Shapes;
 
 namespace Marathon
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
-            InitializeComponent(); loadTime();
-        }
-        
-        //кнопка для регистрации в системе
-        private void BtnMoreInf_Click(object sender, RoutedEventArgs e)
-        { new WinMoreInf().Show(); Close(); }
-        //кнопка меню бегуна
-        private void BtnRunner_Click(object sender, RoutedEventArgs e)
-        {
-            new WinRinnerMenu().Show();
-            Close();
-        }
-        //кнопка для перехода в меню входа
-        private void BtnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            new WinFullLogin().Show();
-            Close();
-        }
-        //метод для отсчета времени
-        public void loadTime()
-        {
-            DateTime now = DateTime.Now;
-            DateTime start = new DateTime(2018, 11, 24, 6, 00, 00);
-            TimeSpan have = start.Subtract(now);
-            if (have.Minutes < 0) { LblTime.Content = "   Марафон закончился"; return; }
-            LblTime.Content = have.Days + " дней " + have.Hours + " часов и " + have.Minutes + " минут до начала гонки";
+            InitializeComponent();
         }
 
-        private void BtnSponsor_Click(object sender, RoutedEventArgs e)
+        private void BtnBecomeRunner_Click(object sender, RoutedEventArgs e)
         {
-            new WinSponsorMenu().Show();
-            Close();
+            new WinRegAsRunner().Show();
+            this.Close();
+        }
+
+        private void BtnBecomeSponsor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMoreInfo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnLoginPg_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

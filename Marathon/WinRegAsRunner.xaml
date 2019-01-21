@@ -1,0 +1,99 @@
+﻿<Window x:Class="Marathon.WinRegAsRunner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Marathon"
+        mc:Ignorable="d"
+        Title="Marathon Skills 2016 - Register as a runner" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#f2ebeb"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonBackStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="15" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="317*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="143*"/>
+            <ColumnDefinition Width="34*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="35*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Marathon Skills 2016" Background="#FF434347" Foreground="White" FontSize="35" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontWeight="Bold" FontFamily="Arial" Grid.RowSpan="3" Grid.Column="3" Grid.ColumnSpan="5"/>
+        <Label Content="" Background="#FF434347" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <Button Name="BtnBack" FontSize="15" FontFamily="Arial" Click="BtnBack_Click" Content="Назад" Grid.Column="1" Grid.Row="1" Style="{DynamicResource ButtonBackStyle}"/>
+        <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="10" Grid.ColumnSpan="8"/>
+        <Button Name="BtnPartEarlier" Click="BtnPartEarlier_Click" Content="Я учавствовал ранее" Foreground="#3d3d3d" FontSize="20" Grid.Column="4" Grid.Row="4" Style="{DynamicResource ButtonBackStyle}"/>
+        <Button Name="BtnNewPart" Click="BtnNewPart_Click"  Content="Я новый участник" Foreground="#3d3d3d" Grid.Column="4" FontSize="20" Grid.Row="6" Style="{DynamicResource ButtonBackStyle}"/>
+        <Button Name="BtnLoginPg" Click="BtnLoginPg_Click" FontSize="20" Content="Login" Foreground="#3d3d3d" Grid.Column="6" Grid.Row="8" Style="{DynamicResource ButtonBackStyle}"/>
+
+    </Grid>
+</Window>
