@@ -22,7 +22,7 @@ namespace Marathon
         public WinLogin()
         {
             InitializeComponent();
-            
+            TimeCalc();
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -34,11 +34,8 @@ namespace Marathon
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        
-        
-        
+        }    
+                
         private void TxtLogin_Changed(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (TxtLogin.Text == "Адрес электронной почты")
@@ -54,6 +51,14 @@ namespace Marathon
                     TxtLogin.Text = "Адрес электронной почты";
                 }
             }
+        }
+
+        public void TimeCalc()
+        {
+            DateTime startTime = new DateTime(2019, 9, 21);
+            DateTime now = DateTime.Now;
+            TimeSpan span = startTime.Subtract(now);
+            LblTime.Content = "Осталось " + span.Days + " дней " + span.Hours + " часов " + span.Minutes + " минут.";
         }
     }
 }
