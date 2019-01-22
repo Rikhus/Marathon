@@ -15,3 +15,5 @@ C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\Marathon.exe
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\Marathon.pdb
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRegAsRunner.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRegAsRunner.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinLogin.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinLogin.baml

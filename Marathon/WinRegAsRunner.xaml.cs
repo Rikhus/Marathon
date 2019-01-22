@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace Marathon
 {
-    /// <summary>
-    /// Логика взаимодействия для WinRegAsRunner.xaml
-    /// </summary>
+    
     public partial class WinRegAsRunner : Window
     {
         public WinRegAsRunner()
@@ -26,12 +24,14 @@ namespace Marathon
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            new MainWindow().Show();
+            Close();
         }
 
         private void BtnLoginPg_Click(object sender, RoutedEventArgs e)
         {
-
+            new WinLogin().Show();
+            Close();
         }
 
         private void BtnPartEarlier_Click(object sender, RoutedEventArgs e)

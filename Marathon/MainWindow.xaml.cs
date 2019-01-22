@@ -40,7 +40,8 @@ namespace Marathon
 
         private void BtnLoginPg_Click(object sender, RoutedEventArgs e)
         {
-
+            new WinLogin().Show();
+            Close();
         }
     }
 }
