@@ -19,10 +19,13 @@ namespace Marathon
     /// </summary>
     public partial class WinLogin : Window
     {
+        
+
         public WinLogin()
         {
             InitializeComponent();
             TimeCalc();
+            
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -33,7 +36,15 @@ namespace Marathon
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            string roleid = Login();
+            if (roleid!=null)
+            {
+                if (roleid == "R")
+                {
+                    new WinRunnerMenu().Show();
+                    Close();
+                }
+            }
         }    
                 
         private void TxtLogin_Changed(object sender, DependencyPropertyChangedEventArgs e)
@@ -59,6 +70,22 @@ namespace Marathon
             DateTime now = DateTime.Now;
             TimeSpan span = startTime.Subtract(now);
             LblTime.Content = "Осталось " + span.Days + " дней " + span.Hours + " часов " + span.Minutes + " минут.";
+        }
+
+        public string Login()
+        {
+            using (var db = new MarathonDBEntities1())
+            {
+                
+                var user = db.User.FirstOrDefault(u => u.Email == TxtLogin.Text && u.Password == PassBox.Password);
+                if (user != null)
+                {
+                    return user.RoleId;
+                }
+                return null;
+
+
+            }
         }
     }
 }
