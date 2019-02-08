@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Marathon
 {
     /// <summary>
-    /// Логика взаимодействия для WinRunnerMenu.xaml
+    /// Логика взаимодействия для WinRunnerReg.xaml
     /// </summary>
-    public partial class WinRunnerMenu : Window
+    public partial class WinRunnerReg : Window
     {
-        public WinRunnerMenu()
+        public WinRunnerReg()
         {
             InitializeComponent();
         }
@@ -28,17 +28,6 @@ namespace Marathon
         {
             new MainWindow().Show();
             Close();
-        }
-
-        private void BtnLogout_Click(object sender, RoutedEventArgs e)
-        {
-            new MainWindow().Show();
-            Close();
-        }
-
-        private void BtnContacts_Click(object sender, RoutedEventArgs e)
-        {
-            new WinContacts().Show();
         }
     }
 }

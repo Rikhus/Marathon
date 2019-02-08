@@ -79,7 +79,8 @@ namespace Marathon
                 
                 var user = db.User.FirstOrDefault(u => u.Email == TxtLogin.Text && u.Password == PassBox.Password);
                 if (user != null)
-                {
+                {        
+                    
                     return user.RoleId;
                 }
                 return null;

@@ -26,3 +26,7 @@ C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\MarathonApp.csproj.CopyComplet
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\MarathonApp.csprojAssemblyReference.cache
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerMenu.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerMenu.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinContacts.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinContacts.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerReg.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerReg.baml

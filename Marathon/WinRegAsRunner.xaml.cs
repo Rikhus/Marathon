@@ -37,12 +37,14 @@ namespace Marathon
 
         private void BtnPartEarlier_Click(object sender, RoutedEventArgs e)
         {
-
+            new WinLogin().Show();
+            Close();
         }
 
         private void BtnNewPart_Click(object sender, RoutedEventArgs e)
         {
-
+            new WinRunnerReg().Show();
+            Close();
         }
         public void TimeCalc()
         {
