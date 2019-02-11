@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>9919.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -79,6 +82,7 @@
     <Compile Include="Gender.cs">
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="LocalStorage.cs" />
     <Compile Include="MarathonDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,11 +137,20 @@
     <Compile Include="Volunteer.cs">
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="WinCharityList.xaml.cs">
+      <DependentUpon>WinCharityList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinContacts.xaml.cs">
       <DependentUpon>WinContacts.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinCoordinatorMenu.xaml.cs">
+      <DependentUpon>WinCoordinatorMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinLogin.xaml.cs">
       <DependentUpon>WinLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinMoreInfo.xaml.cs">
+      <DependentUpon>WinMoreInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinRegAsRunner.xaml.cs">
       <DependentUpon>WinRegAsRunner.xaml</DependentUpon>
@@ -147,6 +160,9 @@
     </Compile>
     <Compile Include="WinRunnerReg.xaml.cs">
       <DependentUpon>WinRunnerReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinSelectRoleDebug.xaml.cs">
+      <DependentUpon>WinSelectRoleDebug.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -160,11 +176,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WinCharityList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinContacts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinCoordinatorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinMoreInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinRunnerReg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinSelectRoleDebug.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -219,6 +251,21 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="9919.ico" />
+    <Resource Include="CharityLogos\arise-logo.png" />
+    <Resource Include="CharityLogos\aves-do-brazil-logo.png" />
+    <Resource Include="CharityLogos\clara-santos-oliveira-institute-logo.png" />
+    <Resource Include="CharityLogos\conquer-cancer-brazil.png" />
+    <Resource Include="CharityLogos\diabetes-brazil-logo.png" />
+    <Resource Include="CharityLogos\heart-health-sao-paulo-logo.png" />
+    <Resource Include="CharityLogos\human-rights-centre-logo.png" />
+    <Resource Include="CharityLogos\querstadtein-logo.png" />
+    <Resource Include="CharityLogos\save-the-children-fund-logo.png" />
+    <Resource Include="CharityLogos\stay-pumped-logo.png" />
+    <Resource Include="CharityLogos\the-red-cross-logo.png" />
+    <Resource Include="CharityLogos\upbeat-logo.png" />
+    <Resource Include="CharityLogos\wwsm-rescue-logo.png" />
+    <Resource Include="marathon-skills-2014-logo.ico" />
     <Content Include="MarathonDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MarathonDB.edmx</DependentUpon>
@@ -229,6 +276,8 @@
       <DependentUpon>MarathonDB.edmx</DependentUpon>
       <LastGenOutput>MarathonDB.cs</LastGenOutput>
     </Content>
+    <Resource Include="travis-ci.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

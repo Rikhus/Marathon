@@ -21,10 +21,12 @@ namespace Marathon
         {
             InitializeComponent();
             TimeCalc();
+            
         }
 
         private void BtnBecomeRunner_Click(object sender, RoutedEventArgs e)
         {
+            
             new WinRegAsRunner().Show();
             this.Close();
         }
@@ -36,11 +38,13 @@ namespace Marathon
 
         private void BtnMoreInfo_Click(object sender, RoutedEventArgs e)
         {
-
+            new WinMoreInfo().Show();
+            Close();
         }
 
         private void BtnLoginPg_Click(object sender, RoutedEventArgs e)
         {
+            
             new WinLogin().Show();
             Close();
         }

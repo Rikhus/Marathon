@@ -136,7 +136,7 @@
             <TextBlock>Женский</TextBlock>
         </ComboBox>
         <Border BorderBrush="Gray" BorderThickness="2"  Grid.ColumnSpan="2" Grid.Column="10" Grid.Row="9" >
-            <Label Content="fgiukdfgjd" FontSize="15" Foreground="Gray" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <Label Content="" FontSize="15" Foreground="Gray" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
         </Border>
 
 

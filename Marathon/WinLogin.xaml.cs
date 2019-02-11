@@ -36,12 +36,24 @@ namespace Marathon
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
+            if (TxtLogin.Text == "Адрес электронной почты")
+            {
+                WinSelectRoleDebug winDebug = new WinSelectRoleDebug();
+                winDebug.Owner = this;
+                winDebug.Show();
+
+            }
             string roleid = Login();
             if (roleid!=null)
             {
                 if (roleid == "R")
                 {
                     new WinRunnerMenu().Show();
+                    Close();
+                }
+                if (roleid == "C")
+                {
+                    new WinCoordinatorMenu().Show();
                     Close();
                 }
             }
@@ -73,14 +85,13 @@ namespace Marathon
         }
 
         public string Login()
-        {
+        {            
             using (var db = new MarathonDBEntities1())
             {
                 
                 var user = db.User.FirstOrDefault(u => u.Email == TxtLogin.Text && u.Password == PassBox.Password);
                 if (user != null)
                 {        
-                    
                     return user.RoleId;
                 }
                 return null;

@@ -30,3 +30,11 @@ C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinContacts.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinContacts.baml
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerReg.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerReg.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinMoreInfo.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinMoreInfo.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinCharityList.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinCharityList.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinSelectRoleDebug.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinSelectRoleDebug.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinCoordinatorMenu.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinCoordinatorMenu.baml

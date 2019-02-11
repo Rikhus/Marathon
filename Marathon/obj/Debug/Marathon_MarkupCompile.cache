@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\Desktop\Marathon\Marathon\App.xaml
-6-1382065683
+10-630836681
 2400899658
-31-1272555330
+36-1647458405
 181055054176
-MainWindow.xaml;WinContacts.xaml;WinLogin.xaml;WinRegAsRunner.xaml;WinRunnerMenu.xaml;WinRunnerReg.xaml;
+MainWindow.xaml;WinCharityList.xaml;WinContacts.xaml;WinCoordinatorMenu.xaml;WinLogin.xaml;WinMoreInfo.xaml;WinRegAsRunner.xaml;WinRunnerMenu.xaml;WinRunnerReg.xaml;WinSelectRoleDebug.xaml;
 
 False
 
