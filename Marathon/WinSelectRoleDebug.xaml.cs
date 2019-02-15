@@ -40,7 +40,9 @@ namespace Marathon
 
         private void BtnAsAdmin_Click(object sender, RoutedEventArgs e)
         {
-
+            new WinAdminMenu().Show();
+            this.Owner.Close();
+            this.Close();
         }
     }
 }

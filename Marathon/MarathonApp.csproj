@@ -137,6 +137,12 @@
     <Compile Include="Volunteer.cs">
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="WinAboutMarathon.xaml.cs">
+      <DependentUpon>WinAboutMarathon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinAdminMenu.xaml.cs">
+      <DependentUpon>WinAdminMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinCharityList.xaml.cs">
       <DependentUpon>WinCharityList.xaml</DependentUpon>
     </Compile>
@@ -145,6 +151,9 @@
     </Compile>
     <Compile Include="WinCoordinatorMenu.xaml.cs">
       <DependentUpon>WinCoordinatorMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinHowLongIsMarathon.xaml.cs">
+      <DependentUpon>WinHowLongIsMarathon.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinLogin.xaml.cs">
       <DependentUpon>WinLogin.xaml</DependentUpon>
@@ -155,14 +164,29 @@
     <Compile Include="WinRegAsRunner.xaml.cs">
       <DependentUpon>WinRegAsRunner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinRegForTheMarathon.xaml.cs">
+      <DependentUpon>WinRegForTheMarathon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinRunnerMenu.xaml.cs">
       <DependentUpon>WinRunnerMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinRunnerProfileEdit.xaml.cs">
+      <DependentUpon>WinRunnerProfileEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinRunnerReg.xaml.cs">
       <DependentUpon>WinRunnerReg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinRunnerRegThanks.xaml.cs">
+      <DependentUpon>WinRunnerRegThanks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinSelectRoleDebug.xaml.cs">
       <DependentUpon>WinSelectRoleDebug.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinSponsor.xaml.cs">
+      <DependentUpon>WinSponsor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinSponsorThanks.xaml.cs">
+      <DependentUpon>WinSponsorThanks.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -176,6 +200,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WinAboutMarathon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinAdminMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinCharityList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,6 +217,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinCoordinatorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinHowLongIsMarathon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -200,7 +236,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinRegForTheMarathon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinRunnerMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinRunnerProfileEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -208,7 +252,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinRunnerRegThanks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinSelectRoleDebug.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinSponsor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinSponsorThanks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

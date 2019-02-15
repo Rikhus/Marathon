@@ -24,8 +24,8 @@ namespace Marathon
         public WinLogin()
         {
             InitializeComponent();
-            TimeCalc();
-            
+            LocalStorage.TimeCalc(LblTime);
+
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -56,6 +56,11 @@ namespace Marathon
                     new WinCoordinatorMenu().Show();
                     Close();
                 }
+                if (roleid == "A")
+                {
+                    new WinAdminMenu().Show();
+                    Close();
+                }
             }
         }    
                 
@@ -76,13 +81,7 @@ namespace Marathon
             }
         }
 
-        public void TimeCalc()
-        {
-            DateTime startTime = new DateTime(2019, 9, 21);
-            DateTime now = DateTime.Now;
-            TimeSpan span = startTime.Subtract(now);
-            LblTime.Content = "Осталось " + span.Days + " дней " + span.Hours + " часов " + span.Minutes + " минут.";
-        }
+        
 
         public string Login()
         {            
@@ -90,6 +89,9 @@ namespace Marathon
             {
                 
                 var user = db.User.FirstOrDefault(u => u.Email == TxtLogin.Text && u.Password == PassBox.Password);
+                LocalStorage.UserClass.Email = user.Email;
+                LocalStorage.UserClass.FirstName = user.FirstName;
+                LocalStorage.UserClass.LastName = user.LastName;
                 if (user != null)
                 {        
                     return user.RoleId;

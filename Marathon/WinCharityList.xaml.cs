@@ -22,7 +22,7 @@ namespace Marathon
         public WinCharityList()
         {
             InitializeComponent();
-            TimeCalc();
+            LocalStorage.TimeCalc(LblTime);
             LoadAll();
         }
 
@@ -31,13 +31,7 @@ namespace Marathon
             new WinMoreInfo().Show();
             Close();
         }
-        public void TimeCalc()
-        {
-            DateTime startTime = new DateTime(2019, 9, 21);
-            DateTime now = DateTime.Now;
-            TimeSpan span = startTime.Subtract(now);
-            LblTime.Content = "Осталось " + span.Days + " дней " + span.Hours + " часов " + span.Minutes + " минут.";
-        }
+       
         public void LoadAll()
         {
             using (var db = new MarathonDBEntities1())

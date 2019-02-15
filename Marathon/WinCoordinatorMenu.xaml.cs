@@ -22,7 +22,7 @@ namespace Marathon
         public WinCoordinatorMenu()
         {
             InitializeComponent();
-            TimeCalc();
+            LocalStorage.TimeCalc(LblTime);
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -30,12 +30,6 @@ namespace Marathon
             new MainWindow().Show();
             Close();
         }
-        public void TimeCalc()
-        {
-            DateTime startTime = new DateTime(2019, 9, 21);
-            DateTime now = DateTime.Now;
-            TimeSpan span = startTime.Subtract(now);
-            LblTime.Content = "Осталось " + span.Days + " дней " + span.Hours + " часов " + span.Minutes + " минут.";
-        }
+       
     }
 }

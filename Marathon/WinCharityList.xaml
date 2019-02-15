@@ -97,10 +97,10 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Информация" >
+                    <GridViewColumn Header="Информация" Width="450">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Label Content="{Binding Info}"></Label>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Info}"></TextBlock>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>                    

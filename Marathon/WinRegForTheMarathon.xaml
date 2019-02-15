@@ -1,0 +1,146 @@
+﻿<Window x:Class="Marathon.WinRegForTheMarathon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Marathon"
+        mc:Ignorable="d"
+        Title="Marathon Skills 2016 - Register for an event" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="#3d3d3d"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="86*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="34*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Marathon Skills 2016" Background="#FF434347" Foreground="White" FontSize="35" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontWeight="Bold" FontFamily="Arial" Grid.Column="6" Grid.RowSpan="3" Grid.ColumnSpan="8"/>
+        <Label Content="" Background="#FF434347" Grid.ColumnSpan="6" Grid.RowSpan="3"/>
+        <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" Grid.Column="1" Grid.Row="1" Style="{DynamicResource ButtonStyle}" Grid.ColumnSpan="2"/>
+        <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="23" Grid.ColumnSpan="14"/>
+        <Label Content="Регистрация на марафон" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontWeight="Bold" Foreground="#3d3d3d" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="11"/>
+        <Label Content="   Пожалуйста заполните всю информацию, чтобы зарегистрироваться на &#xD;&#xA;Skills Marathon 2016 проводимым в Москве. Russia. С вами свяжутся после &#xD;&#xA;                 регистрации для уточнения оплаты и другой информации" FontSize="13" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="11"/>
+        <Label Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Вид марафона" Foreground="Gray" Grid.Column="2" Grid.Row="5"/>
+        <CheckBox Name="ChkFull" Checked="ChkFull_Checked" Unchecked="ChkFull_Unchecked" Content="42km Полный марафон($145)" FontSize="17" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="6"/>
+        <CheckBox Name="ChkHalf" Checked="ChkHalf_Checked" Unchecked="ChkHalf_Unchecked" Content="21km Полумарафон($75)" FontSize="17" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="6" Grid.RowSpan="3"/>
+        <CheckBox Name="ChkSmall" Checked="ChkSmall_Checked" Unchecked="ChkSmall_Unchecked" Content="5km Малая дистанция($20)" FontSize="17" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="13" Grid.ColumnSpan="6"/>
+        <Label FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Варианты комплектов" Foreground="Gray" Grid.Column="10" Grid.Row="5" Grid.ColumnSpan="3"/>
+        <RadioButton Name="RdbtnA" GroupName="ComplectVar" Checked="Rdbtn_Checked" Unchecked="Rdbtn_Unchecked" Content="Вариант А(0$): Номер бегуна +&#xD;&#xA; RFID Браслет" FontSize="17" VerticalContentAlignment="Center" Grid.Column="10" Grid.Row="7" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <RadioButton Name="RdbtnB" GroupName="ComplectVar" Checked="Rdbtn_Checked" Unchecked="Rdbtn_Unchecked" Content="Вариант В(20$): Вариант А +&#xA;бейсболка + бутылка воды" FontSize="17" VerticalContentAlignment="Center" Grid.Column="10" Grid.Row="11" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <RadioButton Name="RdbtnC" GroupName="ComplectVar" Checked="Rdbtn_Checked" Unchecked="Rdbtn_Unchecked" Content="Вариант С(45$): Вариант В +&#xA;футболка + сувенирный буклет" FontSize="17" VerticalContentAlignment="Center" Grid.Column="10" Grid.Row="15" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+        <Label Grid.ColumnSpan="5" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Детали спонсорства" Foreground="Gray" Grid.Column="2" Grid.Row="16"/>
+        <Label Content="Взнос:" Grid.Column="1" FontSize="16"  HorizontalContentAlignment="Right" Grid.Row="17" Grid.ColumnSpan="3"/>
+        <ComboBox Name="CmbCharity" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="17"/>
+        <Label Content="Сумма взноса:" FontSize="16"  HorizontalContentAlignment="Right" Grid.Row="19" Grid.ColumnSpan="4"/>
+        <TextBox Grid.ColumnSpan="4" FontSize="16" MaxLength="25" FontFamily="Consolas" HorizontalContentAlignment="Center" PreviewTextInput="TxtPreviewTextInput"  VerticalContentAlignment="Center" Foreground="Gray" Grid.Column="4" Grid.Row="19" TextWrapping="Wrap" Text="0"/>
+        <Label Grid.ColumnSpan="3" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Content="Регистрационный взнос:" Foreground="Gray" Grid.Column="10" Grid.Row="17" Grid.RowSpan="2"/>
+        <Label Name="LblMoney" Content="$0" Grid.Column="11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" Foreground="Gray" Grid.Row="19" Grid.RowSpan="4"/>
+        <Button Name="BtnCharityInf" Click="BtnCharityInf_Click" Content="i" Grid.Column="8" BorderBrush="Orange" Foreground="Orange" Background="White" Style="{DynamicResource ButtonStyle}"  Grid.Row="17">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse Stroke="Orange"></Ellipse>
+                        <Label VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Foreground="Orange">i</Label>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="BtnRegister" Click="BtnRegister_Click" Style="{DynamicResource ButtonStyle}" Grid.ColumnSpan="4" Content="Регистрация" Grid.Column="1" Grid.Row="21"/>
+        <Button Name="BtnCancel" Click="BtnCancel_Click" Style="{DynamicResource ButtonStyle}" Grid.ColumnSpan="2" Content="Отмена" Grid.Column="6" Grid.Row="21"/>
+
+
+    </Grid>
+</Window>
