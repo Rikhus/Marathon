@@ -67,9 +67,9 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="111*"/>
-            <ColumnDefinition Width="12*"/>
-            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="32*"/>
             <ColumnDefinition Width="88*"/>
             <ColumnDefinition Width="34*"/>
             <ColumnDefinition Width="454*"/>
@@ -92,12 +92,12 @@
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" FontSize="20" Grid.Column="1" Grid.Row="1" Style="{DynamicResource ButtonStyle1}"/>
         <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="9" Grid.ColumnSpan="8"/>
         <Label Content="Информация о Marathon Skills 2016" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Grid.Row="3" Grid.ColumnSpan="6"/>
-        <Image Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="5"/>
-        <Image Grid.Column="1" Grid.Row="7"/>
-        <Image Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="7"/>
-        <Image Grid.Column="1" Grid.Row="8"/>
-        <Image Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="8"/>
-        <Label Content="aghvuihgklagbjkasdughlagfuihqaslgaligha;soksdhgo;a" FontSize="15" Foreground="Gray" Grid.Column="6" Grid.Row="5" Grid.RowSpan="4"/>
+        <Image Source="HowLongMarPictures/marathon-skills-2016-marathon-map.jpg"  Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="5" Stretch="Fill"/>
+        <Image Source="HowLongMarPictures/banco-banespa.jpg" Grid.Column="1" Grid.Row="7" Stretch="Fill"/>
+        <Image Source="HowLongMarPictures\ibirapuera-park-lake.jpg" Stretch="Fill" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="7"/>
+        <Image Source="HowLongMarPictures\marathon-image.jpg" Stretch="Fill" Grid.Column="1" Grid.Row="8"/>
+        <Image Source="HowLongMarPictures\teatro-municipal.jpg" Stretch="Fill" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="8"/>
+        <TextBox IsReadOnly="True" Name="TxtInf" TextWrapping="WrapWithOverflow" FontSize="15" Foreground="Gray" Grid.Column="5" Grid.Row="5" Grid.RowSpan="4" Grid.ColumnSpan="2" Margin="0,0,34,0"/>
 
 
 

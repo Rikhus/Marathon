@@ -192,6 +192,7 @@
     <Property Name="RoleId" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Role" Relationship="Self.FK__User__RoleId__52593CB8" FromRole="User" ToRole="Role" />
     <NavigationProperty Name="Runner" Relationship="Self.FK__Runner__Email__534D60F1" FromRole="User" ToRole="Runner" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Volunteer">
     <Key>
@@ -512,5 +513,28 @@
       <End Role="Staff" EntitySet="Staff" />
       <End Role="Timesheet" EntitySet="Timesheet" />
     </AssociationSet>
+    <EntitySet Name="Speed" EntityType="MarathonModel.Speed" />
+    <EntitySet Name="Distance" EntityType="MarathonModel.Distance" />
   </EntityContainer>
+  <EntityType Name="Speed">
+    <Key>
+      <PropertyRef Name="SpeedId" />
+    </Key>
+    <Property Name="SpeedId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="TopSpeed" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Distance">
+    <Key>
+      <PropertyRef Name="DistanceId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Image" />
+      <PropertyRef Name="Length" />
+    </Key>
+    <Property Name="DistanceId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Length" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
 </Schema>

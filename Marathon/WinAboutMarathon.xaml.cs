@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,20 @@ namespace Marathon
         {
             InitializeComponent();
             LocalStorage.TimeCalc(LblTime);
+            Load();
+        }
+
+        private void Load()
+        {
+            try
+            {
+                string way = Assembly.GetExecutingAssembly().Location.Replace("Marathon.exe", "marathon-skills-2016-marathon-info.txt");
+                TxtInf.Text= File.ReadAllText(way);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

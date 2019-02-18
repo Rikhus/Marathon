@@ -121,7 +121,7 @@
         <Label Content="Пол:" FontSize="15"  VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="13" Grid.ColumnSpan="4" Grid.RowSpan="3"/>
         <Label Content="Фото файл:" FontSize="15" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Grid.Column="9" Grid.Row="8" Grid.ColumnSpan="5" Margin="0,0,5.992,0"/>
 
-        <Button Grid.ColumnSpan="2" Name="BtnFileFind" Content="Просмотр" FontSize="15" Style="{DynamicResource ButtonStyle}" Grid.Column="14" Grid.Row="9"/>
+        <Button Grid.ColumnSpan="2" Name="BtnFileFind" Content="Просмотр" FontSize="15" Style="{DynamicResource ButtonStyle}" Grid.Column="14" Grid.Row="9" Click="BtnFileFind_Click"/>
         <Label Content="Дата рождения:" FontSize="15" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" Grid.Column="9" Grid.Row="11" Grid.RowSpan="3" Grid.ColumnSpan="5" Margin="0,0,5.992,0.001"/>
         <Label Content="Страна:"  FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Grid.Column="10" Grid.Row="14" Grid.RowSpan="3" Grid.ColumnSpan="2" RenderTransformOrigin="0.154,0.471"/>
         <DatePicker Name="BirthOfDatePick" Grid.Column="14" FontSize="15" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Grid.Row="12" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
@@ -134,8 +134,9 @@
         <ComboBox Grid.ColumnSpan="4" Name="CmbCountry" Grid.Column="12" Grid.Row="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="13" Grid.RowSpan="2"/>
         <ComboBox Grid.Column="6" Name="CmbGender"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="13"  Grid.Row="14" Grid.RowSpan="2"/>
         <Border BorderBrush="Gray" BorderThickness="2"  Grid.ColumnSpan="3" Grid.Column="10" Grid.Row="9" >
-            <Label Content="" FontSize="15" Foreground="Gray" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <Label Name="LblFileName" Content="" FontSize="15" Foreground="Gray" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
         </Border>
+        <Image Grid.ColumnSpan="6" Grid.Column="10" Grid.Row="6" Grid.RowSpan="2" Name="ImgProfile"/>
 
 
     </Grid>

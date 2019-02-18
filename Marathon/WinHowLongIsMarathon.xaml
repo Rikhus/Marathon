@@ -93,15 +93,57 @@
         <Label Content="" Background="#FF434347" Grid.ColumnSpan="4" Grid.RowSpan="3"/>
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" FontSize="20" Grid.Column="1" Grid.Row="1" Style="{DynamicResource ButtonStyle1}" Grid.ColumnSpan="2"/>
         <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="10" Grid.ColumnSpan="9"/>
-        <Image Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="6"/>
-        <Label Content="Имя выбранного пункта" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Gray" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4"/>
-        <Label Content="Label" FontSize="15" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="5"/>
+        <Image Name="SelectedImage" Grid.ColumnSpan="5" Grid.Column="1" Grid.Row="6"/>
+        <Label Name="SelectedName" Content="Имя выбранного пункта" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Gray" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4"/>
+        <TextBlock TextWrapping="WrapWithOverflow" FontSize="15" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="5" Name="LblResult"/>
         <TabControl Grid.Column="7" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="5">
             <TabItem Header="Скорость" FontSize="15">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <ListView Name="ListVSpeed" SelectionChanged="ListVSpeed_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Image Source="{Binding ImgSource}"  Height="50" Width="50"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Name}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
             </TabItem>
             <TabItem Header="Дистанция" FontSize="15">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <ListView Name="ListVDistance" SelectionChanged="ListVDistance_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Image Source="{Binding ImgSource}" Height="50" Width="50"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Name}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
             </TabItem>
         </TabControl>
 

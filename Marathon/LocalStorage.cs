@@ -31,6 +31,7 @@ namespace Marathon
             public static string Email { get; set; }
             public static string FirstName { get; set; }
             public static string LastName { get; set; }
+            public static string RunnerId { get; set; }
         }
         
             

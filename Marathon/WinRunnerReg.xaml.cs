@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -59,8 +61,9 @@ namespace Marathon
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
-        {
-            
+        {        
+            User NewUser = new User();
+            Runner NewRunner = new Runner();  
 
             if (PasswdBox.Password == "" || PasswdBox.Password == " "|| ConfirmPasswdBox.Password == "" || ConfirmPasswdBox.Password == " " 
                 || TxtFirstName.Text == "" || TxtFirstName.Text== " " || TxtLastName.Text == "" || TxtLastName.Text == " " || BirthOfDatePick.SelectedDate==null)
@@ -69,6 +72,13 @@ namespace Marathon
                 return;
             }
 
+            NewUser.RoleId = "R";
+            NewUser.FirstName = TxtFirstName.Text;
+            NewUser.LastName = TxtLastName.Text;
+            NewRunner.Gender = CmbGender.SelectedValue.ToString();
+            NewRunner.CountryCode = CmbCountry.SelectedValue.ToString();
+
+            #region Проверка Email.
             EmailAddressAttribute emailCheck = new EmailAddressAttribute();
             if (!emailCheck.IsValid(TxtEmail.Text))
             {
@@ -76,6 +86,11 @@ namespace Marathon
                 return;
             }
 
+            #endregion
+            NewUser.Email = TxtEmail.Text;
+            NewRunner.Email = TxtEmail.Text;
+
+            #region Проверка пароля.
             if (PasswdBox.Password.Length < 6)
             {
                 MessageBox.Show("Пароль должен содержать не менее 6 символов");
@@ -88,9 +103,7 @@ namespace Marathon
                 return;
             }
 
-            // Проверка пароля с Regex.
             Regex reg = new Regex(@"[a-z]");
-
             if (!reg.IsMatch(PasswdBox.Password))
             {
                 MessageBox.Show("Пароль должен содержать как минимум 1 прописную букву");
@@ -110,7 +123,10 @@ namespace Marathon
                 MessageBox.Show("Пароль должен содержать как минимум один из следующих символов\n !@#$%^");
                 return;
             }
-            // Подсчет возраста.
+            #endregion
+            NewUser.Password = PasswdBox.Password;
+
+            #region Подсчет возраста.
             int yearOld = DateTime.Now.Year-Convert.ToInt32(BirthOfDatePick.SelectedDate.Value.Year);
             if (DateTime.Now.DayOfYear<BirthOfDatePick.SelectedDate.Value.DayOfYear)
             {
@@ -121,12 +137,63 @@ namespace Marathon
                     return;
                 }
             }
+            #endregion
+            NewRunner.DateOfBirth = Convert.ToDateTime(BirthOfDatePick.SelectedDate);
+
+            #region Сохранение изображения.
+            if(LblFileName.Content != "")
+            {
+                try
+                {
+                    Byte[] ImgData = null;
+                    FileStream stream = new FileStream(LblFileName.Content.ToString(), FileMode.Open, FileAccess.Read);
+                    StreamReader read = new StreamReader(stream);
+                    ImgData = new byte[stream.Length - 1];
+                    stream.Read(ImgData, 0, (int)stream.Length - 1);
+
+                    NewUser.Image = ImgData;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            #endregion
+
+            using (var DataBase = new MarathonDBEntities1())
+            {
+                DataBase.User.Add(NewUser);
+                DataBase.Runner.Add(NewRunner);
+                DataBase.SaveChanges();
+            }
+
+            #region Сохранение данных в LocalStorage.
             LocalStorage.UserClass.Email = TxtEmail.Text;
             LocalStorage.UserClass.FirstName = TxtFirstName.Text;
             LocalStorage.UserClass.LastName = TxtLastName.Text;
+            LocalStorage.UserClass.RunnerId = NewRunner.RunnerId.ToString();
+            #endregion
             new WinRegForTheMarathon().Show();
             Close();
 
+        }
+
+        private void BtnFileFind_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OpenFileDialog OpenFile = new OpenFileDialog();
+                OpenFile.Filter = "Изображения (*.png, *.jpg) | *.png; *.jpg";
+                if (OpenFile.ShowDialog()==true)
+                {
+                    ImgProfile.Source = new BitmapImage(new Uri(OpenFile.FileName));
+                    LblFileName.Content = OpenFile.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

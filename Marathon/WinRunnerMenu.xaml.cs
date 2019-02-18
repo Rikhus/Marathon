@@ -47,5 +47,17 @@ namespace Marathon
             new WinRunnerProfileEdit().Show();
             Close();
         }
+
+        private void BtnRegisterForMar_Click(object sender, RoutedEventArgs e)
+        {
+            new WinRegForTheMarathon().Show();
+            Close();
+        }
+
+        private void BtnResults_Click(object sender, RoutedEventArgs e)
+        {
+            new WinRunnerRaceResults().Show();
+            Close();
+        }
     }
 }

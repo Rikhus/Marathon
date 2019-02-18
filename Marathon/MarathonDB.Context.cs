@@ -43,5 +43,7 @@ namespace Marathon
         public virtual DbSet<Timesheet> Timesheet { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Volunteer> Volunteer { get; set; }
+        public virtual DbSet<Speed> Speed { get; set; }
+        public virtual DbSet<Distance> Distance { get; set; }
     }
 }

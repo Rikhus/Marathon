@@ -73,6 +73,9 @@
     <Compile Include="Country.cs">
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Distance.cs">
+      <DependentUpon>MarathonDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Event.cs">
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
@@ -120,6 +123,9 @@
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Runner.cs">
+      <DependentUpon>MarathonDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Speed.cs">
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Sponsorship.cs">
@@ -172,6 +178,9 @@
     </Compile>
     <Compile Include="WinRunnerProfileEdit.xaml.cs">
       <DependentUpon>WinRunnerProfileEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinRunnerRaceResults.xaml.cs">
+      <DependentUpon>WinRunnerRaceResults.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinRunnerReg.xaml.cs">
       <DependentUpon>WinRunnerReg.xaml</DependentUpon>
@@ -245,6 +254,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinRunnerProfileEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinRunnerRaceResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -322,6 +335,11 @@
     <Resource Include="CharityLogos\upbeat-logo.png" />
     <Resource Include="CharityLogos\wwsm-rescue-logo.png" />
     <Resource Include="marathon-skills-2014-logo.ico" />
+    <Resource Include="HowLongMarPictures\marathon-skills-2016-marathon-map.jpg" />
+    <Resource Include="HowLongMarPictures\banco-banespa.jpg" />
+    <Resource Include="HowLongMarPictures\ibirapuera-park-lake.jpg" />
+    <Resource Include="HowLongMarPictures\marathon-image.jpg" />
+    <Resource Include="HowLongMarPictures\teatro-municipal.jpg" />
     <Content Include="MarathonDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MarathonDB.edmx</DependentUpon>

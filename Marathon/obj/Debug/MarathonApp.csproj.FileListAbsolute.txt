@@ -43,7 +43,6 @@ C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinSponsor.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinSponsor.baml
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinSponsorThanks.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinSponsorThanks.baml
-C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\MarathonApp.csprojAssemblyReference.cache
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRegForTheMarathon.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRegForTheMarathon.baml
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerRegThanks.g.cs
@@ -54,3 +53,6 @@ C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinAboutMarathon.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinHowLongIsMarathon.g.cs
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinAboutMarathon.baml
 C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinHowLongIsMarathon.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerRaceResults.g.cs
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\WinRunnerRaceResults.baml
+C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\MarathonApp.csprojAssemblyReference.cache

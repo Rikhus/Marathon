@@ -104,8 +104,8 @@
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" FontSize="20" Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="2" Style="{DynamicResource ButtonStyle1}"/>
         <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="15" Grid.ColumnSpan="14"/>
         <Label Content="Меню бегуна" HorizontalContentAlignment="Center" Foreground="#3d3d3d" FontSize="25" Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="6"/>
-        <Button Grid.ColumnSpan="4" Content="Регистрация на марафон" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
-        <Button Grid.ColumnSpan="4" Content="Мои результаты" Grid.Column="8" Grid.Row="6" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
+        <Button Name="BtnRegisterForMar" Click="BtnRegisterForMar_Click" Grid.ColumnSpan="4" Content="Регистрация на марафон" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
+        <Button Name="BtnResults" Click="BtnResults_Click" Grid.ColumnSpan="4" Content="Мои результаты" Grid.Column="8" Grid.Row="6" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
         <Button Name="BtnEditProfile" Click="BtnEditProfile_Click" Grid.ColumnSpan="4" Content="Редактирование профиля" Grid.Column="3" Grid.Row="9" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
         <Button Grid.ColumnSpan="4" Content="Мой спонсор" Grid.Column="8" Grid.Row="9" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
         <Button Name="BtnContacts" Click="BtnContacts_Click" Grid.ColumnSpan="4" Content="Контакты" Grid.Column="3" Grid.Row="12" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>

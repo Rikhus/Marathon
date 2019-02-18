@@ -41,6 +41,8 @@
         <AssociationConnector Association="MarathonModel.FK__User__RoleId__52593CB8" ManuallyRouted="false" />
         <AssociationConnector Association="MarathonModel.FK__Runner__Email__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="MarathonModel.FK_Timesheet_Staff" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MarathonModel.Speed" Width="1.5" PointX="10.375" PointY="5.75" />
+        <EntityTypeShape EntityType="MarathonModel.Distance" Width="1.5" PointX="5.375" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

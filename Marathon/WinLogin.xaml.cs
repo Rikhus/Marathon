@@ -84,21 +84,32 @@ namespace Marathon
         
 
         public string Login()
-        {            
-            using (var db = new MarathonDBEntities1())
+        {
+            try
             {
-                
-                var user = db.User.FirstOrDefault(u => u.Email == TxtLogin.Text && u.Password == PassBox.Password);
-                LocalStorage.UserClass.Email = user.Email;
-                LocalStorage.UserClass.FirstName = user.FirstName;
-                LocalStorage.UserClass.LastName = user.LastName;
-                if (user != null)
-                {        
-                    return user.RoleId;
+                using (var db = new MarathonDBEntities1())
+                {
+
+
+                    var user = db.User.FirstOrDefault(u => u.Email == TxtLogin.Text && u.Password == PassBox.Password);
+                    LocalStorage.UserClass.Email = user.Email;
+                    LocalStorage.UserClass.FirstName = user.FirstName;
+                    LocalStorage.UserClass.LastName = user.LastName;
+                    LocalStorage.UserClass.RunnerId = user.Runner.FirstOrDefault(u=>u.Email==user.Email).RunnerId.ToString();
+                    if (user != null)
+                    {
+
+                        return user.RoleId;
+                    }
+                    return null;
+
+
                 }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Неверный логин или пароль");
                 return null;
-
-
             }
         }
     }

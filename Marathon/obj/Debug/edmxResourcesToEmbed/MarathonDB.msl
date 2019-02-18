@@ -169,6 +169,7 @@
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="MarathonModel.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -185,6 +186,26 @@
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Speed">
+      <EntityTypeMapping TypeName="MarathonModel.Speed">
+        <MappingFragment StoreEntitySet="Speed">
+          <ScalarProperty Name="TopSpeed" ColumnName="TopSpeed" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SpeedId" ColumnName="SpeedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distance">
+      <EntityTypeMapping TypeName="MarathonModel.Distance">
+        <MappingFragment StoreEntitySet="Distance">
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DistanceId" ColumnName="DistanceId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

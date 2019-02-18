@@ -78,16 +78,21 @@
             <ColumnDefinition Width="44*"/>
             <ColumnDefinition Width="52*"/>
             <ColumnDefinition Width="75*"/>
-            <ColumnDefinition Width="138*"/>
-            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="54*"/>
             <ColumnDefinition Width="27*"/>
-            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="12*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25*"/>
             <RowDefinition Height="45*"/>
             <RowDefinition Height="25*"/>
-            <RowDefinition Height="44*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="27*"/>
             <RowDefinition Height="35*"/>
             <RowDefinition Height="33*"/>
             <RowDefinition Height="10*"/>
@@ -109,40 +114,49 @@
             <RowDefinition Height="23*"/>
             <RowDefinition Height="34*"/>
         </Grid.RowDefinitions>
-        <Label Content="Marathon Skills 2016" Background="#FF434347" Foreground="White" FontSize="35" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontWeight="Bold" FontFamily="Arial" Grid.Column="5" Grid.RowSpan="3" Grid.ColumnSpan="11"/>
+        <Label Content="Marathon Skills 2016" Background="#FF434347" Foreground="White" FontSize="35" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontWeight="Bold" FontFamily="Arial" Grid.Column="5" Grid.RowSpan="3" Grid.ColumnSpan="15"/>
         <Label Content="" Background="#FF434347" Grid.ColumnSpan="5" Grid.RowSpan="3"/>
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" Grid.Column="1" Grid.Row="1" Style="{DynamicResource ButtonStyle}" Grid.ColumnSpan="2"/>
-        <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="23" Grid.ColumnSpan="16"/>
-        <Label Content="Редактирование профиля" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontWeight="Bold" Foreground="#3d3d3d" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="6"/>
-        <Label Content="Email:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2"/>
-        <Label Content="Имя:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2"/>
-        <Label Content="Фамилия:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2"/>
-        <Label Content="Пол:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2"/>
-        <Label Content="Дата рождения:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Row="13" Grid.ColumnSpan="3"/>
-        <Label Content="Страна:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="15" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <ComboBox Name="CmbCountry" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="15" Grid.RowSpan="2"/>
-        <DatePicker Name="DayOfBirthPick"  Grid.Column="4" Grid.Row="13" Grid.ColumnSpan="4"/>
-        <ComboBox Name="CmbGender" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="11"/>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="9">
+        <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="24" Grid.ColumnSpan="20"/>
+        <Label Content="Редактирование профиля" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontWeight="Bold" Foreground="#3d3d3d" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="6" Grid.RowSpan="2"/>
+        <Label Content="Email:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <Label Content="Имя:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2"/>
+        <Label Content="Фамилия:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="2"/>
+        <Label Content="Пол:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="2"/>
+        <Label Content="Дата рождения:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Row="14" Grid.ColumnSpan="3"/>
+        <Label Content="Страна:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="1" Grid.Row="16" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <ComboBox Name="CmbCountry" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="16" Grid.RowSpan="2"/>
+        <DatePicker Name="DateOfBirthPick"  Grid.Column="4" Grid.Row="14" Grid.ColumnSpan="4"/>
+        <ComboBox Name="CmbGender" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="12"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="10">
             <TextBox Name="TxtLastName" TextWrapping="Wrap" HorizontalContentAlignment="Left" PreviewTextInput="TxtPreviewTextInput" VerticalContentAlignment="Center" FontSize="15" Text=""/>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="7">
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="8">
             <TextBox Name="TxtFirstName" TextWrapping="Wrap"  HorizontalContentAlignment="Left" PreviewTextInput="TxtPreviewTextInput" VerticalContentAlignment="Center" FontSize="15" Text=""/>
         </Border>
-        <Label Content="Смена пароля" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontWeight="Bold" Foreground="#3d3d3d" Grid.Column="11" Grid.Row="11" Grid.ColumnSpan="2"/>
+        <Label Content="Смена пароля" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontWeight="Bold" Foreground="#3d3d3d" Grid.Column="11" Grid.Row="12" Grid.ColumnSpan="4"/>
 
-        <Label Content="Оставьте эти поля незаполненными, &#xD;&#xA;если вы не хотите изменять пароль" Foreground="Gray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Grid.Column="10" Grid.Row="13" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
-        <Label Content="Пароль:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="10" Grid.Row="16" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <Label Content="Повтор пароля:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="10" Grid.Row="19" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2" Grid.Column="12" Grid.Row="16" Grid.RowSpan="2">
+        <Label Content="Оставьте эти поля незаполненными, &#xD;&#xA;если вы не хотите изменять пароль" Foreground="Gray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Grid.Column="10" Grid.Row="14" Grid.ColumnSpan="8" Grid.RowSpan="2"/>
+        <Label Content="Пароль:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="10" Grid.Row="17" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label Content="Повтор пароля:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="15" Grid.Column="10" Grid.Row="20" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="5" Grid.Column="12" Grid.Row="17" Grid.RowSpan="2">
             <PasswordBox Name="PasswdBox" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="15" />
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="12" Grid.Row="19" Grid.ColumnSpan="2" Grid.RowSpan="2">
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="12" Grid.Row="20" Grid.ColumnSpan="5" Grid.RowSpan="2">
             <PasswordBox Name="ConfirmPasswdBox" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="15" />
         </Border>
-        <Button Name="BtnSaveChanges" Click="BtnSaveChanges_Click" Grid.ColumnSpan="3" Content="Сохранить" Grid.Column="2" Style="{DynamicResource ButtonStyle}" Grid.Row="20" Grid.RowSpan="2"/>
-        <Button Click="BtnBack_Click" Grid.ColumnSpan="3" Content="Отмена" Grid.Column="6" Style="{DynamicResource ButtonStyle}" Grid.Row="20" Grid.RowSpan="2"/>
-        <Label Name="LblEmail" Content="" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="15" Grid.Column="4" Grid.Row="5" Grid.ColumnSpan="4"/>
+        <Button Name="BtnSaveChanges" Click="BtnSaveChanges_Click" Grid.ColumnSpan="3" Content="Сохранить" Grid.Column="2" Style="{DynamicResource ButtonStyle}" Grid.Row="21" Grid.RowSpan="2"/>
+        <Button Click="BtnBack_Click" Grid.ColumnSpan="3" Content="Отмена" Grid.Column="6" Style="{DynamicResource ButtonStyle}" Grid.Row="21" Grid.RowSpan="2"/>
+        <Label Name="LblEmail" Content="" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="15" Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="4"/>
+        <Button Grid.ColumnSpan="4" Style="{DynamicResource ButtonStyle}" Name="BtnLogout" Click="BtnLogout_Click"  Content="Logout" Grid.Column="13" Grid.Row="1"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="4" Grid.Column="13" Grid.Row="4" Grid.RowSpan="4">
+            <Image Name="ImgProfile"/>
+        </Border>
+        <Label Content="Фото файл:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Grid.Column="10" Grid.Row="8" Grid.ColumnSpan="2"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3" Grid.Column="10" Grid.Row="10">
+            <TextBox IsReadOnly="True" Name="TxtPhotoFile" FontSize="15" HorizontalContentAlignment="Left" Foreground="Gray" VerticalContentAlignment="Center" TextWrapping="Wrap" Text=""/>
+        </Border>
+        <Button Name="BtnFindPhoto" Grid.ColumnSpan="5" Content="Просмотр..." Style="{DynamicResource ButtonStyle}"  Grid.Column="14" Grid.Row="10" Click="BtnFindPhoto_Click"/>
 
 
     </Grid>

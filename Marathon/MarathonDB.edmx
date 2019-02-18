@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище MarathonModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище MarathonModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Charity">
           <Key>
             <PropertyRef Name="CharityId" />
@@ -21,6 +21,20 @@
           <Property Name="CountryCode" Type="char" MaxLength="3" Nullable="false" />
           <Property Name="CountryName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="CountryFlag" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Marathon.dbo.Distance" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Distance">
+          <Key>
+            <PropertyRef Name="DistanceId" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Image" />
+            <PropertyRef Name="Length" />
+          </Key>
+          <Property Name="DistanceId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Image" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Length" Type="decimal" Precision="10" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Event">
           <Key>
@@ -122,6 +136,15 @@
           <Property Name="DateOfBirth" Type="datetime" />
           <Property Name="CountryCode" Type="char" MaxLength="3" Nullable="false" />
         </EntityType>
+        <EntityType Name="Speed">
+          <Key>
+            <PropertyRef Name="SpeedId" />
+          </Key>
+          <Property Name="SpeedId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Image" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="TopSpeed" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+        </EntityType>
         <EntityType Name="Sponsorship">
           <Key>
             <PropertyRef Name="SponsorshipId" />
@@ -163,6 +186,7 @@
           <Property Name="FirstName" Type="varchar" MaxLength="80" />
           <Property Name="LastName" Type="varchar" MaxLength="80" />
           <Property Name="RoleId" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Image" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Volunteer">
           <Key>
@@ -404,11 +428,20 @@
           <EntitySet Name="RegistrationStatus" EntityType="Self.RegistrationStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Runner" EntityType="Self.Runner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Speed" EntityType="Self.Speed" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sponsorship" EntityType="Self.Sponsorship" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Timesheet" EntityType="Self.Timesheet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Volunteer" EntityType="Self.Volunteer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Distance" EntityType="Self.Distance" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Distance].[DistanceId] AS [DistanceId], 
+    [Distance].[Name] AS [Name], 
+    [Distance].[Image] AS [Image], 
+    [Distance].[Length] AS [Length]
+    FROM [dbo].[Distance] AS [Distance]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__Event__EventType__5CD6CB2B" Association="Self.FK__Event__EventType__5CD6CB2B">
             <End Role="EventType" EntitySet="EventType" />
             <End Role="Event" EntitySet="Event" />
@@ -482,8 +515,7 @@
             <End Role="Timesheet" EntitySet="Timesheet" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MarathonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -679,6 +711,7 @@
           <Property Name="RoleId" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Role" Relationship="Self.FK__User__RoleId__52593CB8" FromRole="User" ToRole="Role" />
           <NavigationProperty Name="Runner" Relationship="Self.FK__Runner__Email__534D60F1" FromRole="User" ToRole="Runner" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Volunteer">
           <Key>
@@ -999,7 +1032,30 @@
             <End Role="Staff" EntitySet="Staff" />
             <End Role="Timesheet" EntitySet="Timesheet" />
           </AssociationSet>
+          <EntitySet Name="Speed" EntityType="MarathonModel.Speed" />
+          <EntitySet Name="Distance" EntityType="MarathonModel.Distance" />
         </EntityContainer>
+        <EntityType Name="Speed">
+          <Key>
+            <PropertyRef Name="SpeedId" />
+          </Key>
+          <Property Name="SpeedId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TopSpeed" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="Distance">
+          <Key>
+            <PropertyRef Name="DistanceId" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Image" />
+            <PropertyRef Name="Length" />
+          </Key>
+          <Property Name="DistanceId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Length" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1174,6 +1230,7 @@
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="MarathonModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -1190,6 +1247,26 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speed">
+            <EntityTypeMapping TypeName="MarathonModel.Speed">
+              <MappingFragment StoreEntitySet="Speed">
+                <ScalarProperty Name="TopSpeed" ColumnName="TopSpeed" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SpeedId" ColumnName="SpeedId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Distance">
+            <EntityTypeMapping TypeName="MarathonModel.Distance">
+              <MappingFragment StoreEntitySet="Distance">
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DistanceId" ColumnName="DistanceId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

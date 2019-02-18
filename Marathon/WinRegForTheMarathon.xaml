@@ -125,7 +125,7 @@
         <Label Content="Взнос:" Grid.Column="1" FontSize="16"  HorizontalContentAlignment="Right" Grid.Row="17" Grid.ColumnSpan="3"/>
         <ComboBox Name="CmbCharity" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Grid.ColumnSpan="4" Grid.Column="4" Grid.Row="17"/>
         <Label Content="Сумма взноса:" FontSize="16"  HorizontalContentAlignment="Right" Grid.Row="19" Grid.ColumnSpan="4"/>
-        <TextBox Grid.ColumnSpan="4" FontSize="16" MaxLength="25" FontFamily="Consolas" HorizontalContentAlignment="Center" PreviewTextInput="TxtPreviewTextInput"  VerticalContentAlignment="Center" Foreground="Gray" Grid.Column="4" Grid.Row="19" TextWrapping="Wrap" Text="0"/>
+        <TextBox Name="TxtPayment" Grid.ColumnSpan="4" FontSize="16" MaxLength="25" FontFamily="Consolas" HorizontalContentAlignment="Center" PreviewTextInput="TxtPreviewTextInput"  VerticalContentAlignment="Center" Foreground="Gray" Grid.Column="4" Grid.Row="19" TextWrapping="Wrap" Text="0"/>
         <Label Grid.ColumnSpan="3" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Content="Регистрационный взнос:" Foreground="Gray" Grid.Column="10" Grid.Row="17" Grid.RowSpan="2"/>
         <Label Name="LblMoney" Content="$0" Grid.Column="11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" Foreground="Gray" Grid.Row="19" Grid.RowSpan="4"/>
         <Button Name="BtnCharityInf" Click="BtnCharityInf_Click" Content="i" Grid.Column="8" BorderBrush="Orange" Foreground="Orange" Background="White" Style="{DynamicResource ButtonStyle}"  Grid.Row="17">
