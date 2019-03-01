@@ -94,10 +94,10 @@
         <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="9" Grid.ColumnSpan="9"/>
         <Label Content="Меню координатора" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#3d3d3d" FontSize="30" Grid.Row="3" Grid.ColumnSpan="9"/>
         <Button Grid.ColumnSpan="2" Style="{DynamicResource ButtonStyle1}" Content="Пользователи" Grid.Column="2" Grid.Row="5"/>
-        <Button Content="Волонтеры" Style="{DynamicResource ButtonStyle1}" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <Button Name="BtnVolunteer" Click="BtnVolunteer_Click" Content="Волонтеры" Style="{DynamicResource ButtonStyle1}" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2"/>
         <Button Content="Logout" Click="BtnBack_Click" Style="{DynamicResource ButtonStyle1}"  Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Button Content="Благотворительные&#xD;&#xA;      организации" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2"/>
-        <Button Content="Инвентарь" Style="{DynamicResource ButtonStyle1}" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="2"/>
+        <Button Name="BtnCharityManage" Click="BtnCharityManage_Click" Content="Благотворительные&#xD;&#xA;      организации" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2"/>
+        <Button Name="BtnInventory" Click="BtnInventory_Click" Content="Инвентарь" Style="{DynamicResource ButtonStyle1}" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="2"/>
 
 
 

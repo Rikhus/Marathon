@@ -149,7 +149,7 @@
         <Label Name="lblMoney" Content="50$" Grid.Column="11" Grid.Row="12" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Gray" Grid.RowSpan="3" Grid.ColumnSpan="6" />
         <Button Name="BtnPlusMoney" Click="BtnPlusMoney_Click" Content="+" Style="{DynamicResource ButtonStyle}" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Grid.Column="11" Grid.Row="16"/>
         <Button Name="BtnMinusMoney" Click="BtnMinusMoney_Click" Content="-" Style="{DynamicResource ButtonStyle}" Grid.Column="16" Grid.Row="16"/>
-        <TextBox Name="txtMoney" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MaxLength="9" FontSize="20" Foreground="Gray" Grid.Column="13" Grid.Row="16" TextWrapping="Wrap" Text="50" Grid.ColumnSpan="2" SelectionChanged="TxtMoney_SelectionChanged"  PreviewTextInput="TextInputNumber"/>
+        <TextBox Name="txtMoney" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MaxLength="7" FontSize="20" Foreground="Gray" Grid.Column="13" Grid.Row="16" TextWrapping="Wrap" Text="50" Grid.ColumnSpan="2" SelectionChanged="TxtMoney_SelectionChanged"  PreviewTextInput="TextInputNumber"/>
         <Button Name="BtnPay" Click="BtnPay_Click" Grid.ColumnSpan="3" Style="{DynamicResource ButtonStyle}" Content="Заплатить" Grid.Column="10" Grid.Row="18"/>
         <Button Click="BtnBack_Click" Style="{DynamicResource ButtonStyle}" Content="Отмена" Grid.Column="14" Grid.Row="18"/>
         <Button Name="BtnCharityInfo" Click="BtnCharityInfo_Click" Content="i" Style="{DynamicResource ButtonStyle}" Grid.Column="17" Grid.Row="7"/>

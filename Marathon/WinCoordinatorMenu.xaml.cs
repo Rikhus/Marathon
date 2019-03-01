@@ -30,6 +30,11 @@ namespace Marathon
             new MainWindow().Show();
             Close();
         }
-       
+
+        private void BtnManageRunners_Click(object sender, RoutedEventArgs e)
+        {
+            new WinRunnersInfoManage().Show();
+            Close();
+        }
     }
 }

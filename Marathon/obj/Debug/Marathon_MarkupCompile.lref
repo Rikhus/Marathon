@@ -3,10 +3,16 @@
 FC:\Users\User\Desktop\Marathon\Marathon\MainWindow.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinAboutMarathon.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinAdminMenu.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinArrival.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinCharitiesManage.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinCharityList.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinContacts.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinCoordinatorMenu.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinEditAddCharity.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinHowLongIsMarathon.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinInteractiveMap.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinInventory.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinInvReport.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinLogin.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinMoreInfo.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinRegAsRunner.xaml;;
@@ -19,4 +25,8 @@ FC:\Users\User\Desktop\Marathon\Marathon\WinRunnerRegThanks.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinSelectRoleDebug.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinSponsor.xaml;;
 FC:\Users\User\Desktop\Marathon\Marathon\WinSponsorThanks.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinVolunteers.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinLoadVolunteers.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinRunnerSponsorship.xaml;;
+FC:\Users\User\Desktop\Marathon\Marathon\WinRunnersInfoManage.xaml;;
 

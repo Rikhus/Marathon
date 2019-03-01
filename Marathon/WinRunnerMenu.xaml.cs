@@ -59,5 +59,11 @@ namespace Marathon
             new WinRunnerRaceResults().Show();
             Close();
         }
+
+        private void BtnSponsor_Click(object sender, RoutedEventArgs e)
+        {
+            new WinRunnerSponsorship().Show();
+            Close();
+        }
     }
 }

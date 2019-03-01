@@ -45,5 +45,6 @@ namespace Marathon
         public virtual DbSet<Volunteer> Volunteer { get; set; }
         public virtual DbSet<Speed> Speed { get; set; }
         public virtual DbSet<Distance> Distance { get; set; }
+        public virtual DbSet<Checkpoint> Checkpoint { get; set; }
     }
 }

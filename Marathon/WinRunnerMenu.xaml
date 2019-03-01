@@ -107,7 +107,7 @@
         <Button Name="BtnRegisterForMar" Click="BtnRegisterForMar_Click" Grid.ColumnSpan="4" Content="Регистрация на марафон" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
         <Button Name="BtnResults" Click="BtnResults_Click" Grid.ColumnSpan="4" Content="Мои результаты" Grid.Column="8" Grid.Row="6" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
         <Button Name="BtnEditProfile" Click="BtnEditProfile_Click" Grid.ColumnSpan="4" Content="Редактирование профиля" Grid.Column="3" Grid.Row="9" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
-        <Button Grid.ColumnSpan="4" Content="Мой спонсор" Grid.Column="8" Grid.Row="9" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
+        <Button Name="BtnSponsor" Click="BtnSponsor_Click" Grid.ColumnSpan="4" Content="Мой спонсор" Grid.Column="8" Grid.Row="9" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
         <Button Name="BtnContacts" Click="BtnContacts_Click" Grid.ColumnSpan="4" Content="Контакты" Grid.Column="3" Grid.Row="12" Grid.RowSpan="2" Style="{DynamicResource ButtonStyle1}"/>
         <Button Name="BtnLogout" Click="BtnLogout_Click" Grid.ColumnSpan="2" Content="Logout" Grid.Column="11" Grid.Row="1" Style="{DynamicResource ButtonStyle1}"/>
         

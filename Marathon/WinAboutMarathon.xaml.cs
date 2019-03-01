@@ -21,12 +21,14 @@ namespace Marathon
     /// </summary>
     public partial class WinAboutMarathon : Window
     {
+        
         public WinAboutMarathon()
         {
             InitializeComponent();
             LocalStorage.TimeCalc(LblTime);
             Load();
         }
+        
 
         private void Load()
         {
@@ -44,6 +46,12 @@ namespace Marathon
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             new WinMoreInfo().Show();
+            Close();
+        }
+
+        private void ImageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            new WinInteractiveMap().Show();
             Close();
         }
     }

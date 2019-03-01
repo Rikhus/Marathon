@@ -92,7 +92,9 @@
         <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" FontSize="20" Grid.Column="1" Grid.Row="1" Style="{DynamicResource ButtonStyle1}"/>
         <Label Content="" Name="LblTime" Background="#FF434347" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Grid.Row="9" Grid.ColumnSpan="8"/>
         <Label Content="Информация о Marathon Skills 2016" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Grid.Row="3" Grid.ColumnSpan="6"/>
-        <Image Source="HowLongMarPictures/marathon-skills-2016-marathon-map.jpg"  Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="5" Stretch="Fill"/>
+        <Button Name="ImageBtn" Click="ImageBtn_Click" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="5">
+            <Image Source="HowLongMarPictures/marathon-skills-2016-marathon-map.jpg" Stretch="Fill"/>
+        </Button>
         <Image Source="HowLongMarPictures/banco-banespa.jpg" Grid.Column="1" Grid.Row="7" Stretch="Fill"/>
         <Image Source="HowLongMarPictures\ibirapuera-park-lake.jpg" Stretch="Fill" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="7"/>
         <Image Source="HowLongMarPictures\marathon-image.jpg" Stretch="Fill" Grid.Column="1" Grid.Row="8"/>

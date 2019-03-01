@@ -33,6 +33,14 @@ namespace Marathon
             public static string LastName { get; set; }
             public static string RunnerId { get; set; }
         }
+
+        public class CharityClass
+        {
+            public static string CharityName { get; set; }
+            public static string CharityDesc { get; set; }
+            public static string CharityLogo { get; set; }
+            public static string CharityId { get; set; }
+        }
         
             
         

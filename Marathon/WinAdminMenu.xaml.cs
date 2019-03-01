@@ -30,6 +30,23 @@ namespace Marathon
             new MainWindow().Show();
             Close();
         }
-      
+
+        private void BtnInventory_Click(object sender, RoutedEventArgs e)
+        {
+            new WinInventory().Show();
+            Close();
+        }
+
+        private void BtnCharityManage_Click(object sender, RoutedEventArgs e)
+        {
+            new WinCharitiesManage().Show();
+            Close();
+        }
+
+        private void BtnVolunteer_Click(object sender, RoutedEventArgs e)
+        {
+            new WinVolunteers().Show();
+            Close();
+        }
     }
 }

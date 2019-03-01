@@ -9,6 +9,18 @@
     <Property Name="CharityDescription" Type="varchar" MaxLength="2000" />
     <Property Name="CharityLogo" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Checkpoint">
+    <Key>
+      <PropertyRef Name="CheckpointId" />
+    </Key>
+    <Property Name="CheckpointId" Type="int" Nullable="false" />
+    <Property Name="Landmark" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Drinks" Type="smallint" Nullable="false" />
+    <Property Name="EnergyBars" Type="smallint" Nullable="false" />
+    <Property Name="Toilets" Type="smallint" Nullable="false" />
+    <Property Name="Information" Type="smallint" Nullable="false" />
+    <Property Name="Medical" Type="smallint" Nullable="false" />
+  </EntityType>
   <EntityType Name="Country">
     <Key>
       <PropertyRef Name="CountryCode" />
@@ -411,6 +423,7 @@
   </Association>
   <EntityContainer Name="Хранилище MarathonModelContainer">
     <EntitySet Name="Charity" EntityType="Self.Charity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Checkpoint" EntityType="Self.Checkpoint" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EventType" EntityType="Self.EventType" Schema="dbo" store:Type="Tables" />

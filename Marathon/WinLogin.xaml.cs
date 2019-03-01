@@ -95,7 +95,10 @@ namespace Marathon
                     LocalStorage.UserClass.Email = user.Email;
                     LocalStorage.UserClass.FirstName = user.FirstName;
                     LocalStorage.UserClass.LastName = user.LastName;
-                    LocalStorage.UserClass.RunnerId = user.Runner.FirstOrDefault(u=>u.Email==user.Email).RunnerId.ToString();
+                    if (user.RoleId == "R")
+                    {
+                        LocalStorage.UserClass.RunnerId = user.Runner.FirstOrDefault(u => u.Email == user.Email).RunnerId.ToString();
+                    }
                     if (user != null)
                     {
 

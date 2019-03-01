@@ -56,20 +56,27 @@ namespace Marathon
                 var user = db.User.AsNoTracking().FirstOrDefault(u=>u.Email==LocalStorage.UserClass.Email);
 
                 // Загрузка изображения из бд.
-                var i = new BitmapImage();
-                using (var ms = new MemoryStream(user.Image))
+                try
                 {
-                    ms.Position = 0;
-                    i.BeginInit();
-                    i.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
-                    i.CacheOption = BitmapCacheOption.OnLoad;
-                    i.UriSource = null;
-                    i.StreamSource = ms;
-                    i.EndInit();
-                }
-                i.Freeze();
+                    var i = new BitmapImage();
+                    using (var ms = new MemoryStream(user.Image))
+                    {
+                        ms.Position = 0;
+                        i.BeginInit();
+                        i.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                        i.CacheOption = BitmapCacheOption.OnLoad;
+                        i.UriSource = null;
+                        i.StreamSource = ms;
+                        i.EndInit();
+                    }
+                    i.Freeze();
 
-                ImgProfile.Source = i;
+                    ImgProfile.Source = i;
+                }
+                catch
+                {
+
+                }
             }
             #endregion
         }

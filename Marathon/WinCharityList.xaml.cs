@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -38,12 +39,13 @@ namespace Marathon
             {
                 var charities = db.Charity.ToList();
                 List<Data> lizt = new List<Data>();
+                string path = Assembly.GetExecutingAssembly().Location.Replace("bin\\Debug\\Marathon.exe", "");
                 foreach(var charityOrganization in charities)
                 {
                     Data d = new Data
                     {
                         Info = charityOrganization.CharityName + "\n" + "\n"+ charityOrganization.CharityDescription,
-                        ImagePath = "CharityLogos/" + charityOrganization.CharityLogo
+                        ImagePath = path +"CharityLogos/" + charityOrganization.CharityLogo
                     };
                     lizt.Add(d);
                 }

@@ -118,7 +118,7 @@
         <CheckBox Name="ChkHalf" Checked="ChkHalf_Checked" Unchecked="ChkHalf_Unchecked" Content="21km Полумарафон($75)" FontSize="17" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="6" Grid.RowSpan="3"/>
         <CheckBox Name="ChkSmall" Checked="ChkSmall_Checked" Unchecked="ChkSmall_Unchecked" Content="5km Малая дистанция($20)" FontSize="17" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="13" Grid.ColumnSpan="6"/>
         <Label FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Варианты комплектов" Foreground="Gray" Grid.Column="10" Grid.Row="5" Grid.ColumnSpan="3"/>
-        <RadioButton Name="RdbtnA" GroupName="ComplectVar" Checked="Rdbtn_Checked" Unchecked="Rdbtn_Unchecked" Content="Вариант А(0$): Номер бегуна +&#xD;&#xA; RFID Браслет" FontSize="17" VerticalContentAlignment="Center" Grid.Column="10" Grid.Row="7" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <RadioButton Name="RdbtnA" IsChecked="True" GroupName="ComplectVar" Checked="Rdbtn_Checked" Unchecked="Rdbtn_Unchecked" Content="Вариант А(0$): Номер бегуна +&#xD;&#xA; RFID Браслет" FontSize="17" VerticalContentAlignment="Center" Grid.Column="10" Grid.Row="7" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
         <RadioButton Name="RdbtnB" GroupName="ComplectVar" Checked="Rdbtn_Checked" Unchecked="Rdbtn_Unchecked" Content="Вариант В(20$): Вариант А +&#xA;бейсболка + бутылка воды" FontSize="17" VerticalContentAlignment="Center" Grid.Column="10" Grid.Row="11" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
         <RadioButton Name="RdbtnC" GroupName="ComplectVar" Checked="Rdbtn_Checked" Unchecked="Rdbtn_Unchecked" Content="Вариант С(45$): Вариант В +&#xA;футболка + сувенирный буклет" FontSize="17" VerticalContentAlignment="Center" Grid.Column="10" Grid.Row="15" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
         <Label Grid.ColumnSpan="5" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Детали спонсорства" Foreground="Gray" Grid.Column="2" Grid.Row="16"/>
@@ -128,7 +128,7 @@
         <TextBox Name="TxtPayment" Grid.ColumnSpan="4" FontSize="16" MaxLength="25" FontFamily="Consolas" HorizontalContentAlignment="Center" PreviewTextInput="TxtPreviewTextInput"  VerticalContentAlignment="Center" Foreground="Gray" Grid.Column="4" Grid.Row="19" TextWrapping="Wrap" Text="0"/>
         <Label Grid.ColumnSpan="3" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Content="Регистрационный взнос:" Foreground="Gray" Grid.Column="10" Grid.Row="17" Grid.RowSpan="2"/>
         <Label Name="LblMoney" Content="$0" Grid.Column="11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" Foreground="Gray" Grid.Row="19" Grid.RowSpan="4"/>
-        <Button Name="BtnCharityInf" Click="BtnCharityInf_Click" Content="i" Grid.Column="8" BorderBrush="Orange" Foreground="Orange" Background="White" Style="{DynamicResource ButtonStyle}"  Grid.Row="17">
+        <Button Name="BtnCharityInf" Click="BtnCharityInf_Click" Grid.Column="8" BorderBrush="Orange" Foreground="Orange" Background="White" Style="{DynamicResource ButtonStyle}"  Grid.Row="17">
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
@@ -137,6 +137,7 @@
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
+            
         </Button>
         <Button Name="BtnRegister" Click="BtnRegister_Click" Style="{DynamicResource ButtonStyle}" Grid.ColumnSpan="4" Content="Регистрация" Grid.Column="1" Grid.Row="21"/>
         <Button Name="BtnCancel" Click="BtnCancel_Click" Style="{DynamicResource ButtonStyle}" Grid.ColumnSpan="2" Content="Отмена" Grid.Column="6" Grid.Row="21"/>

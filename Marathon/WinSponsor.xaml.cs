@@ -23,8 +23,6 @@ namespace Marathon
     {
         int Money=50;
         int RegistrationId;
-        //public List<RunnerClass> RunnersList = new List<RunnerClass>();
-        //List<Runner> runners = new List<Runner>();
        
         public WinSponsor()
         {

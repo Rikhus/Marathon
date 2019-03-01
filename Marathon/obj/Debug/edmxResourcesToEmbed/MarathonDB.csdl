@@ -515,6 +515,7 @@
     </AssociationSet>
     <EntitySet Name="Speed" EntityType="MarathonModel.Speed" />
     <EntitySet Name="Distance" EntityType="MarathonModel.Distance" />
+    <EntitySet Name="Checkpoint" EntityType="MarathonModel.Checkpoint" />
   </EntityContainer>
   <EntityType Name="Speed">
     <Key>
@@ -536,5 +537,17 @@
     <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Image" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
     <Property Name="Length" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Checkpoint">
+    <Key>
+      <PropertyRef Name="CheckpointId" />
+    </Key>
+    <Property Name="CheckpointId" Type="Int32" Nullable="false" />
+    <Property Name="Landmark" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Drinks" Type="Int16" Nullable="false" />
+    <Property Name="EnergyBars" Type="Int16" Nullable="false" />
+    <Property Name="Toilets" Type="Int16" Nullable="false" />
+    <Property Name="Information" Type="Int16" Nullable="false" />
+    <Property Name="Medical" Type="Int16" Nullable="false" />
   </EntityType>
 </Schema>

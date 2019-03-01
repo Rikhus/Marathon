@@ -209,5 +209,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Checkpoint">
+      <EntityTypeMapping TypeName="MarathonModel.Checkpoint">
+        <MappingFragment StoreEntitySet="Checkpoint">
+          <ScalarProperty Name="Medical" ColumnName="Medical" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="Toilets" ColumnName="Toilets" />
+          <ScalarProperty Name="EnergyBars" ColumnName="EnergyBars" />
+          <ScalarProperty Name="Drinks" ColumnName="Drinks" />
+          <ScalarProperty Name="Landmark" ColumnName="Landmark" />
+          <ScalarProperty Name="CheckpointId" ColumnName="CheckpointId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

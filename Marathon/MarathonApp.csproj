@@ -70,6 +70,9 @@
     <Compile Include="Charity.cs">
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Checkpoint.cs">
+      <DependentUpon>MarathonDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Country.cs">
       <DependentUpon>MarathonDB.tt</DependentUpon>
     </Compile>
@@ -149,6 +152,12 @@
     <Compile Include="WinAdminMenu.xaml.cs">
       <DependentUpon>WinAdminMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinArrival.xaml.cs">
+      <DependentUpon>WinArrival.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinCharitiesManage.xaml.cs">
+      <DependentUpon>WinCharitiesManage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinCharityList.xaml.cs">
       <DependentUpon>WinCharityList.xaml</DependentUpon>
     </Compile>
@@ -158,8 +167,23 @@
     <Compile Include="WinCoordinatorMenu.xaml.cs">
       <DependentUpon>WinCoordinatorMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinEditAddCharity.xaml.cs">
+      <DependentUpon>WinEditAddCharity.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinHowLongIsMarathon.xaml.cs">
       <DependentUpon>WinHowLongIsMarathon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinInteractiveMap.xaml.cs">
+      <DependentUpon>WinInteractiveMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinInventory.xaml.cs">
+      <DependentUpon>WinInventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinInvReport.xaml.cs">
+      <DependentUpon>WinInvReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinLoadVolunteers.xaml.cs">
+      <DependentUpon>WinLoadVolunteers.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinLogin.xaml.cs">
       <DependentUpon>WinLogin.xaml</DependentUpon>
@@ -188,6 +212,12 @@
     <Compile Include="WinRunnerRegThanks.xaml.cs">
       <DependentUpon>WinRunnerRegThanks.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinRunnersInfoManage.xaml.cs">
+      <DependentUpon>WinRunnersInfoManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinRunnerSponsorship.xaml.cs">
+      <DependentUpon>WinRunnerSponsorship.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinSelectRoleDebug.xaml.cs">
       <DependentUpon>WinSelectRoleDebug.xaml</DependentUpon>
     </Compile>
@@ -196,6 +226,9 @@
     </Compile>
     <Compile Include="WinSponsorThanks.xaml.cs">
       <DependentUpon>WinSponsorThanks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinVolunteers.xaml.cs">
+      <DependentUpon>WinVolunteers.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -217,6 +250,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinArrival.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinCharitiesManage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinCharityList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -229,7 +270,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinEditAddCharity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinHowLongIsMarathon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinInteractiveMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinInvReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinLoadVolunteers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -269,6 +330,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinRunnersInfoManage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinRunnerSponsorship.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinSelectRoleDebug.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -278,6 +347,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinSponsorThanks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinVolunteers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -340,6 +413,12 @@
     <Resource Include="HowLongMarPictures\ibirapuera-park-lake.jpg" />
     <Resource Include="HowLongMarPictures\marathon-image.jpg" />
     <Resource Include="HowLongMarPictures\teatro-municipal.jpg" />
+    <Resource Include="MapIcons\map-icon-drinks.png" />
+    <Resource Include="MapIcons\map-icon-energy-bars.png" />
+    <Resource Include="MapIcons\map-icon-information.png" />
+    <Resource Include="MapIcons\map-icon-medical.png" />
+    <Resource Include="MapIcons\map-icon-start.png" />
+    <Resource Include="MapIcons\map-icon-toilets.png" />
     <Content Include="MarathonDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MarathonDB.edmx</DependentUpon>
