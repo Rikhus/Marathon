@@ -49,5 +49,17 @@ namespace Marathon
             new WinAboutMarathon().Show();
             Close();
         }
+
+        private void BtnBMR_Click(object sender, RoutedEventArgs e)
+        {
+            new WinBMR().Show();
+            Close();
+        }
+
+        private void BtnBMI_Click(object sender, RoutedEventArgs e)
+        {
+            new WinBMI().Show();
+            Close();
+        }
     }
 }

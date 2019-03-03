@@ -155,6 +155,12 @@
     <Compile Include="WinArrival.xaml.cs">
       <DependentUpon>WinArrival.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinBMI.xaml.cs">
+      <DependentUpon>WinBMI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinBMR.xaml.cs">
+      <DependentUpon>WinBMR.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinCharitiesManage.xaml.cs">
       <DependentUpon>WinCharitiesManage.xaml</DependentUpon>
     </Compile>
@@ -251,6 +257,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinArrival.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinBMI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinBMR.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -419,6 +433,12 @@
     <Resource Include="MapIcons\map-icon-medical.png" />
     <Resource Include="MapIcons\map-icon-start.png" />
     <Resource Include="MapIcons\map-icon-toilets.png" />
+    <Resource Include="BMI Icons\bmi-healthy-icon.png" />
+    <Resource Include="BMI Icons\bmi-obese-icon.png" />
+    <Resource Include="BMI Icons\bmi-overweight-icon.png" />
+    <Resource Include="BMI Icons\bmi-underweight-icon.png" />
+    <Resource Include="GenderIcons\female-icon.png" />
+    <Resource Include="GenderIcons\male-icon.png" />
     <Content Include="MarathonDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MarathonDB.edmx</DependentUpon>

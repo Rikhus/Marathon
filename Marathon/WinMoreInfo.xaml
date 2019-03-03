@@ -98,8 +98,8 @@
         <Button Name="BtnHowLongMar" Click="BtnHowLongMar_Click" Content="Насколько долгий марафон" Style="{DynamicResource ButtonStyle1}" Grid.Column="6" Grid.Row="5"/>
         <Button Grid.ColumnSpan="3" Style="{DynamicResource ButtonStyle1}" Content="Предыдущие результаты" Grid.Column="2" Grid.Row="7"/>
         <Button Name="BtnCharityInf" Click="BtnCharityInf_Click" Content="Список благотворительных &#xD;&#xA;            организаций" Style="{DynamicResource ButtonStyle1}" Grid.Column="6" Grid.Row="7"/>
-        <Button Content="BMI калькулятор" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="3"/>
-        <Button Content="BMR калькулятор" Style="{DynamicResource ButtonStyle1}" Grid.Column="6" Grid.Row="9"/>
+        <Button Name="BtnBMI" Click="BtnBMI_Click" Content="BMI калькулятор" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="3"/>
+        <Button Name="BtnBMR" Click="BtnBMR_Click" Content="BMR калькулятор" Style="{DynamicResource ButtonStyle1}" Grid.Column="6" Grid.Row="9"/>
 
 
 

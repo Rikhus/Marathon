@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\User\Desktop\Marathon\Marathon\obj\Debug\
+C:\Users\Rishat\Desktop\Marathon\Marathon\obj\Debug\
 Marathon
 none
 false
 DEBUG;TRACE
-C:\Users\User\Desktop\Marathon\Marathon\App.xaml
-29-778838608
+C:\Users\Rishat\Desktop\Marathon\Marathon\App.xaml
+311250996064
 2400899658
-62-299856046
-181055054176
-MainWindow.xaml;WinAboutMarathon.xaml;WinAdminMenu.xaml;WinArrival.xaml;WinCharitiesManage.xaml;WinCharityList.xaml;WinContacts.xaml;WinCoordinatorMenu.xaml;WinEditAddCharity.xaml;WinHowLongIsMarathon.xaml;WinInteractiveMap.xaml;WinInventory.xaml;WinInvReport.xaml;WinLoadVolunteers.xaml;WinLogin.xaml;WinMoreInfo.xaml;WinRegAsRunner.xaml;WinRegForTheMarathon.xaml;WinRunnerMenu.xaml;WinRunnerProfileEdit.xaml;WinRunnerRaceResults.xaml;WinRunnerReg.xaml;WinRunnerRegThanks.xaml;WinRunnersInfoManage.xaml;WinRunnerSponsorship.xaml;WinSelectRoleDebug.xaml;WinSponsor.xaml;WinSponsorThanks.xaml;WinVolunteers.xaml;
+64-1670116485
+18969399455
+MainWindow.xaml;WinAboutMarathon.xaml;WinAdminMenu.xaml;WinArrival.xaml;WinBMI.xaml;WinBMR.xaml;WinCharitiesManage.xaml;WinCharityList.xaml;WinContacts.xaml;WinCoordinatorMenu.xaml;WinEditAddCharity.xaml;WinHowLongIsMarathon.xaml;WinInteractiveMap.xaml;WinInventory.xaml;WinInvReport.xaml;WinLoadVolunteers.xaml;WinLogin.xaml;WinMoreInfo.xaml;WinRegAsRunner.xaml;WinRegForTheMarathon.xaml;WinRunnerMenu.xaml;WinRunnerProfileEdit.xaml;WinRunnerRaceResults.xaml;WinRunnerReg.xaml;WinRunnerRegThanks.xaml;WinRunnersInfoManage.xaml;WinRunnerSponsorship.xaml;WinSelectRoleDebug.xaml;WinSponsor.xaml;WinSponsorThanks.xaml;WinVolunteers.xaml;
 
 False
 
